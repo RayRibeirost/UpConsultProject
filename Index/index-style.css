@@ -2,143 +2,101 @@
 /** Estilos Gerais **/
 
 body {
-    background-color: #D9D9D9;
-}
-
-h2 {
-    font-family: 'Inter', sans-serif;
-    font-weight: bold;
-    font-size: 28px;
-    color: #1E1E26;
-}
-
-h3 {
-    font-family: 'Inter', sans-serif;
-    font-weight: bold;
-    color: #121276;
-    font-size: 16px;
-}
-
-p {
+    background-color: white;
     font-family: 'Inter', sans-serif;
     font-size: 16px;
-    color: #1E1E26;
+}
+
+header {
+    text-align: center;
 }
 
 /** Banner inicial **/
 
-header {
-    background-color: white;
-    margin: 0 auto;
-    margin: 2%;
-    border-radius: 10px;
-    padding: 20px 0 ;
+    /** menu **/
+
+#menu-principal, .escuro-faq {
+    display: inline-block;
 }
 
-#menu-principal {
+#menu-principal ul {
+    list-style: none;
     text-align: center;
 }
 
-#menu-principal li {
-    display: inline;
-    list-style: none;
-
-}
-
 #menu-principal a {
-    color: #121276;
-    font-family: 'Montserrat', sans-serif;
     text-decoration: none;
+    color: #121276;
 }
 
-#logo-upconsult-nav {
-    margin-right: 130px;
+#menu-principal li {
+    display: inline-block;
+    margin-right: 50px
 }
 
 .item-menu {
-    margin-right: 70px;
+    margin-left: 50px;
+}
+
+#logo-upconsult-nav {
+    margin-right: 80px;
 }
 
 #criar-conta {
-    margin-left: 100px;
     font-weight: bold;
 }
 
 #login {
-    font-weight: bold;
     background-color: #E5C73F;
-    color: #1E1E26;
-    margin-left: 30px;
-    padding: 10px 30px;
-    border-radius: 5px;
+    padding: 7px 40px;
+    border-radius: 10px;
+    font-weight: bold;
 }
 
-.escuro-faq {
-    text-align: right;
-    margin-right: 30px; 
-}
 
-.banner-inicial {
-    width: 90%;
-    text-align: center;
-    margin: 0 auto;
-    margin-bottom: 100px;
-}
-
-.banner-inicial div{
-    display: inline-block;
-}
+    /** Banner Principal **/
 
 .mensagem-inicial, .imagem-inicial {
+    display: inline-block;
     width: 50%;
-    font-family: 'Montserrat', sans-serif;
 }
 
-.mensagem-inicial h1 {
-    color: #1E1E26;
-    font-weight: bold;
-    font-size: 70px;
-    margin-bottom: 70px;
-    text-align: left;
-}
-
-.mensagem-inicial h1 span {
-    font-size: 70;
-    color: #E5C73F;
-}
-
-.mensagem-inicial p {
-    color:#1E1E26;
-    font-size: 18px;
-    margin-bottom: 100px;
-    text-align: left;
+.mensagem-inicial {
+    position: absolute;
+    left: 350px
 }
 
 .imagem-inicial {
-    float: right;
+    margin-left: 650px;
+    margin-top: 50px;
+    margin-bottom: 70px;
 }
+
+.banner-inicial h1, .banner-inicial p {
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+}
+
+.banner-inicial h1 {
+    font-size: 70px;
+}
+
+.banner-inicial p {
+    font-size: 18px;
+    font-weight: 600;
+    width: 50%;
+    line-height: 35px;
+}
+
+
+
+.banner-inicial span {
+    color: #E5C73F;
+}
+
 
 
 /** Sobre **/
-
-#sobre {
-    width: 80%;
-    margin: 0 auto;
-}
-
-#imagem-sobre, #sobre-info {
-    display: inline-block;
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-
-#sobre-info {
-    width: 50%;
-}
-
-.info-especial-sobre,  .info-especial-sobre div, .info-especial-sobre figure{
-    display: inline-block;
-}
 
 
 /** Ferramentas **/

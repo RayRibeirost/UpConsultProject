@@ -1,0 +1,98 @@
+.sup-login {
+    text-align: right;
+}
+
+.logo-esquerda {
+    left: 100px;
+    position: absolute;
+    top: 80px;
+
+}
+
+.escuro-login ul {
+    list-style: none;
+    text-align: right;
+    right: 100px;
+    position: absolute;
+    top: 45px;
+}
+
+.i-login {
+    position: absolute;
+    left: 100px;
+}
+
+section h1 {
+    color: #121276;
+    font-weight: bold;
+    text-align: right;
+    margin-right: 140px;
+    margin-top: 100px;
+}
+
+p {
+    color: #121276;
+    font-size: 15px;
+    text-align: right;
+    margin-bottom: 20px;
+    margin-right: 55px;
+
+}
+
+.cad-login {
+    text-align: right;
+    margin-right: 120px;
+    font-size: 15px;
+    color: black;
+
+}
+
+.esqc-passw {
+    text-align: right;
+    margin-right: 97px;
+    font-size: 15px;
+    color:black;
+
+}
+
+section {
+    margin-top: 50px;
+    margin-right: 200px;
+}
+
+form {
+    text-align: right;
+
+}
+
+label {
+    margin-right: 270px;
+}
+
+input {
+    border: 2px solid;
+    border-radius: 8px;
+    padding: 12px;
+    width: 270px;
+    background-color: #cfcfd8;
+    margin-bottom: 15px;
+    color: #cfcfd8;
+    margin: 10px;
+
+}
+
+
+#enviar {
+    width: 200px;
+    margin-right: 55px;
+    padding: 18px;
+    border: #E5C73F;
+    background-color: #E5C73F;
+    color: black;
+    margin-bottom: 80px;
+}
+
+.pag-login {
+    text-align: center;
+    margin-bottom: 50px;
+}
