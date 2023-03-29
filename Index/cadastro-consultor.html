@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!--
+        FONTES:
+            font-family: 'Inter', sans-serif;
+            font-family: 'Montserrat', sans-serif;
+    -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!--
+        Arquivos locais
+    -->
+
+    <link rel="stylesheet" href="./cadastro-consultor.style.css">
+    <script src="./script.js"></script>
+
+
+    <title>Cadastro Consultor</title>
+
+</head>
+
+<body>
+    <header>
+        <div class="superior-cadastro">
+            <img src="../Resources/Cadastro e Login images/logo-superior-direito.png" alt="">
+        </div>
+        <div class="seta">
+            <a href=""><img src="../Resources/Cadastro e Login images/conf-icon-seta-voltar.png" alt=""></a>
+        </div>
+        <div class="escuro-faq">
+            <ul>
+                <li><a href=""><img src="../Resources/Cadastro e Login images/icon-escuro.png" alt=""></a>
+                </li>
+                <li><a href=""><img src="../Resources/Cadastro e Login images/icon-faq.png" alt=""></a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <section>
+            <h1>Cadastro</h1>
+            <p>Preencha os dados solicitados com atenção</p>
+            <form action="dados">
+                <label for="">Nome</label><br>
+                <input type="text" name="nome" id="nome" placeholder=" Digite seu nome"> <br>
+                <label for="">Email</label><br>
+                <input type="email" name="email" id="email" placeholder=" Digite seu email"><br>
+                <label for="">CPF ou CNPJ</label><br>
+                <input type="text" name="cpf-cnpj" id="cpf-cnpj" placeholder=" Digite Cpf ou CNPJ"> <br>
+                <label for="">Senha</label><br>
+                <input type="password" name="senha" id="senha" placeholder=" Digite sua senha"><br>
+                <label for="">Confirme a senha</label><br>
+                <input type="password" name="confsenha" id="confsenha" placeholder=" Confirme a senha"><br>
+                <label for="Resumo">Um breve resumo sobre sua carreira até então.</label><br><br>
+                <textarea name="" id="texto" cols="30" rows="10">Escreva aqui</textarea><br>
+                <label for="">Dados comprobatórios: Currículo, diplomas e <br>cerificações</label><br><br>
+                <button>Anexar arquivos</button><br>
+                <input type="submit" name="enviar" id="enviar" value="Cadastrar">
+            </form>
+        </section>
+        <section class="i-cadastro">
+            <img src="../Resources/Cadastro e Login images/cadastro-image.png" alt="">
+        </section>
+        <div class="i-logojgt">
+            <img src="../Resources/Cadastro e Login images/logo-footer.png" alt="">
+        </div>
+    </main>
+    <footer>
+        <img src="../Resources/Cadastro e Login images/detalhe-inferior-esquerdo.png" alt="">
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,157 @@
+
+/** Estilos Gerais **/
+
+body {
+    background-color: #D9D9D9;
+}
+
+h2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    font-size: 28px;
+    color: #1E1E26;
+}
+
+h3 {
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    color: #121276;
+    font-size: 16px;
+}
+
+p {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #1E1E26;
+}
+
+/** Banner inicial **/
+
+header {
+    background-color: white;
+    margin: 0 auto;
+    margin: 2%;
+    border-radius: 10px;
+    padding: 20px 0 ;
+}
+
+#menu-principal {
+    text-align: center;
+}
+
+#menu-principal li {
+    display: inline;
+    list-style: none;
+
+}
+
+#menu-principal a {
+    color: #121276;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+}
+
+#logo-upconsult-nav {
+    margin-right: 130px;
+}
+
+.item-menu {
+    margin-right: 70px;
+}
+
+#criar-conta {
+    margin-left: 100px;
+    font-weight: bold;
+}
+
+#login {
+    font-weight: bold;
+    background-color: #E5C73F;
+    color: #1E1E26;
+    margin-left: 30px;
+    padding: 10px 30px;
+    border-radius: 5px;
+}
+
+.escuro-faq {
+    text-align: right;
+    margin-right: 30px; 
+}
+
+.banner-inicial {
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+
+.banner-inicial div{
+    display: inline-block;
+}
+
+.mensagem-inicial, .imagem-inicial {
+    width: 50%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.mensagem-inicial h1 {
+    color: #1E1E26;
+    font-weight: bold;
+    font-size: 70px;
+    margin-bottom: 70px;
+    text-align: left;
+}
+
+.mensagem-inicial h1 span {
+    font-size: 70;
+    color: #E5C73F;
+}
+
+.mensagem-inicial p {
+    color:#1E1E26;
+    font-size: 18px;
+    margin-bottom: 100px;
+    text-align: left;
+}
+
+.imagem-inicial {
+    float: right;
+}
+
+
+/** Sobre **/
+
+#sobre {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#imagem-sobre, #sobre-info {
+    display: inline-block;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#sobre-info {
+    width: 50%;
+}
+
+.info-especial-sobre,  .info-especial-sobre div, .info-especial-sobre figure{
+    display: inline-block;
+}
+
+
+/** Ferramentas **/
+
+
+
+/** Planos **/
+
+
+/** Depoimentos | Notícias e eventos **/
+
+
+/** Banner CTA **/
+
+
+/** Footer **/

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--
+        FONTES:
+            font-family: 'Inter', sans-serif;
+            font-family: 'Montserrat', sans-serif;
+    -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <!--
+        Arquivos locais
+    -->
+
+    <link rel="stylesheet" href="./index-style.css">
+    <script src="./index-script.js"></script>
+    
+    <title>Upconsult - Landing Page</title>
+</head>
+<body>
+
+
+    <header>
+        <nav id="menu-principal">
+            <ul>
+                <li><a><img src="../Resources/Landing Page images/inicio-logo-upconsult.png" alt="" id="logo-upconsult-nav"></a></li>
+                <li><a href="" class="item-menu">Home</a></li>
+                <li><a href="" class="item-menu">Sobre</a></li>
+                <li><a href="" class="item-menu">Planos</a></li>
+                <li><a href="" class="item-menu">Depoimentos</a></li>
+                <li><a href="" id="criar-conta">Criar conta</a></li>
+                <li><a href="" id="login">Login</a></li>
+            </ul>
+        </nav>
+        <div class="escuro-faq">
+            <a href=""><img src="../Resources/Landing Page images/icone-modo-escuro.png" alt="" id="modo-escuro"></a>
+            <a href=""><img src="../Resources/Landing Page images/icone-faq.png" alt="" id="duvidas"></a>
+        </div>
+        <section class="banner-inicial">
+            <div class="mensagem-inicial">
+                <h1>Um <span>Up</span> na sua <br> carreira <br> Um <span>Up</span> na sua <br> empresa</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris dignissim neque bibendum porta aliquet. Pellentesque imperdiet fringilla turpis, a blandit est luctus ut.</p>
+            </div>
+            <div class="imagem-inicial">
+                <img src="../Resources/Landing Page images/banner-imagem-inicial.png" alt="" class="imagem-banner-inicial">
+            </div>
+        </section>
+    </header>
+
+
+    <main>
+        <!-- Sobre nós -->
+        <section id="sobre">
+            <figure id="imagem-sobre">
+                <img src="../Resources/Landing Page images/sobre-imagem.png" alt="" >
+            </figure>
+            <div id="sobre-info">
+                <h3>Sobre nós</h3>
+                <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris dignissim neque bibendum porta aliquet. </p>
+                <div class="info-sobre">
+                    <div class="info-especial-sobre">
+                        <figure>
+                            <img src="../Resources/Landing Page images/sobre-icone-ambicoes.png" alt="">
+                        </figure>
+                        <div>
+                            <p class="titulo-especial sobre">Ambições</p>
+                            <p class="info-titulo-especial=sobre">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>     
+                        </div>
+                    </div>
+                    <div class="info-especial-sobre">
+                        <figure>
+                            <img src="../Resources/Landing Page images/sobre-icone-diferencial.png" alt="">
+                        </figure>
+                        <div>
+                            <p class="titulo-especial-sobre">Diferencial</p>
+                            <p class="info-titulo-especial sobre">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>     
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Ferramentas -->
+        <section id="ferramentas">
+            <h3>Ferramentas</h3>
+            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+            <div class="ferramentas-cards-div">
+                <div class="ferramentas-card">
+                    <img src="../Resources/Landing Page images/ferramentas-icone-chat.png" alt="">
+                    <p class="titulo-especial">Chat Empresa-Consultor</p>
+                    <p class="info-titulo-especial">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="ferramentas-card">
+                    <figure>
+                        <img src="../Resources/Landing Page images/ferramentas-icone-feed.png" alt="">
+                    </figure>
+                    <p class="titulo-especial">Feed de divulgação</p>
+                    <p class="info-titulo-especial">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="ferramentas-card">
+                    <figure>
+                        <img src="../Resources/Landing Page images/ferramentas-icone-agenda.png" alt="">
+                    </figure>
+                    <p class="titulo-especial">Agenda</p>
+                    <p class="info-titulo-especial">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="ferramentas-card">
+                    <figure>
+                        <img src="../Resources/Landing Page images/ferramentas-icone-feedback.png" alt="">
+                    </figure>
+                    <p class="titulo-especial">Área de feedback</p>
+                    <p class="info-titulo-especial">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Planos -->
+        <section id="planos">
+            <h3>Planos</h3>
+            <h2>Planos que oferecemos</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris dignissim neque bibendum porta aliquet. </p>
+            <div class="planos-botoes">
+                <button class="planos-botao-empresa">Empresa</button>
+                <button class="planos-botao-consultor">Consultor</button>
+            </div>
+            <div class="planos-card">
+                <h3>Plano gratuito</h3>
+                <h2>R$ 0,00</h2>
+                <ul>
+                    <li>Lorem ipsum dolor sit amet, </li>
+                    <li>consectetur adipiscing elit, sed do eiusmod </li>
+                    <li>tempor incididunt ut labore et dolore </li>
+                    <li>magna aliqua. Ut enim ad minim </li>
+                    <li>veniam, quis nostrud exercitation ullamco</li>
+                </ul>
+            </div>
+            <button>Contratar</button>
+            <div class="planos-card">
+                <h3>Plano gratuito</h3>
+                <h2>R$ 0,00</h2>
+                <ul>
+                    <li>Lorem ipsum dolor sit amet, </li>
+                    <li>consectetur adipiscing elit, sed do eiusmod </li>
+                    <li>tempor incididunt ut labore et dolore </li>
+                    <li>magna aliqua. Ut enim ad minim </li>
+                    <li>veniam, quis nostrud exercitation ullamco</li>
+                </ul>
+            </div>
+            <button>Contratar</button>
+            <div class="planos-card">
+                <h3>Plano gratuito</h3>
+                <h2>R$ 0,00</h2>
+                <ul>
+                    <li>Lorem ipsum dolor sit amet, </li>
+                    <li>consectetur adipiscing elit, sed do eiusmod </li>
+                    <li>tempor incididunt ut labore et dolore </li>
+                    <li>magna aliqua. Ut enim ad minim </li>
+                    <li>veniam, quis nostrud exercitation ullamco</li>
+                </ul>
+            </div>
+            <button>Contratar</button>
+        </section>
+        <!-- Avaliações, notícias e eventos -->
+        <section id="avaliacoes-noticias">
+            <section class="avaliacoes">
+                <h3>Avaliações</h3>
+                <h2>Leia as mais novas avaliações dos nossos usuários...</h2>
+                <div class="avaliacoes-cards">
+                    <div class="card-avaliacoes">
+                        <img src="../Resources/Landing Page images/avaliacoes-foto-joao.png" alt="" class="card-avaliacoes-usuario">
+                        <p class="card-avaliacoes-nome">João Pé de Feijão</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        <img src="../Resources/Landing Page images/avaliacoes-estrelas-joao.png" alt="" class="card-avaliacoes-estrelas">
+                    </div>
+                    <div class="card-avaliacoes">
+                        <img src="../Resources/Landing Page images/avaliacoes-foto-chico.png" alt="" class="card-avaliacoes-usuario">
+                        <p class="card-avaliacoes-nome">Chico Bento</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        <img src="../Resources/Landing Page images/avaliacoes-estrelas-chico.png" alt="" class="card-avaliacoes-estrelas">
+                    </div>
+                    <div class="card-avaliacoes">
+                        <img src="../Resources/Landing Page images/avaliacoes-foto-maria.png" alt="" class="card-avaliacoes-usuario">
+                        <p class="card-avaliacoes-nome">Maria da Silva</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                        <img src="../Resources/Landing Page images/avaliacoes-estrelas-maria.png" alt="" class="card-avaliacoes-estrelas">
+                    </div>
+                </div>
+            </section>
+            <section class="noticias">
+                <h3>Notícias e Eventos</h3>
+                <h2>Últimas notícias</h2>
+                <div class="noticias-cards">
+                    <div class="card-noticia">
+                        <img src="../Resources/Landing Page images/noticias-foto1.png" alt="" class="foto-noticia">
+                        <p class="data-noticia">10 Mar 2023 | BBC News</p>
+                        <p class="titulo-noticia">Mercado de Consultoria cada vez mais em expansão</p>
+                    </div>
+                    <div class="card-noticia">
+                        <img src="../Resources/Landing Page images/noticias-foto2.png" alt="" class="foto-noticia">
+                        <p class="data-noticia">25 Fev 2023 |  Folha de São Paulo</p>
+                        <p class="titulo-noticia">Mulheres estão ocupando cada vez mais vagas em Gestão de Negócios.</p>
+                    </div>
+                    <div class="card-noticia">
+                        <img src="../Resources/Landing Page images/noticias-foto3.png" alt="" class="foto-noticia">
+                        <p class="data-noticia">18 Fev 2023 |  O Globo</p>
+                        <p class="titulo-noticia">Trabalho em equipe: saiba como aumentar a renda da sua empresa.</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <!-- Banner CTA -->
+        <section id="banner-cta">
+            <p class="cta-titulo">Nós podemos te ajudar a crescer</p>
+            <p class="cta-legenda">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris dignissim neque bibendum porta aliquet. </p>
+            <button class="cta-button">Cadastrar</button>
+        </section>
+    </main>
+    <footer>
+        <figure class="footer-logo">
+            <img src="../Resources/Landing Page images/footer-logo.png" alt="">
+        </figure>
+        <p class="footer-message">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris dignissim neque bibendum porta aliquet. Pellentesque imperdiet fringilla turpis, a blandit est luctus ut.</p>
+        <div class="footer-media-icons">
+            <a href="" class="media-icon"><img src="../Resources/Landing Page images/footer-facebook.png" alt=""></a>
+            <a href="" class="media-icon"><img src="../Resources/Landing Page images/footer-instagram.png" alt=""></a>
+            <a href="" class="media-icon"><img src="../Resources/Landing Page images/footer-linkedin.png" alt=""></a>
+            <a href="" class="media-icon"><img src="../Resources/Landing Page images/footer-twitter.png" alt=""></a>
+        </div>
+        <div class="footer-legendas">
+            <p>Copyright 2023 JGTtech | Todos os direitos reservados</p>
+            <p><a href="">Sobre</a> • <a href="">Termos e Condições</a> • <a href="">Privacidade</a></p>
+        </div>
+    </footer>
+</body>
+</html>

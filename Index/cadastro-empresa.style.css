@@ -1,0 +1,72 @@
+.sup-cadempresa {
+    text-align: right;
+}
+
+.escuro-empresa ul {
+    list-style: none;
+    text-align: right;
+    right: 50px;
+    position: absolute;
+    top: 45px;
+}
+
+.seta-empresa {
+    text-align: left;
+    left: 50px;
+    position: absolute;
+    top: 45px;
+
+}
+
+section h1 {
+    color: #121276;
+    font-weight: bold;
+    margin-left: 100px;
+}
+
+p {
+    color: #121276;
+    font-size: 12px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+
+section {
+    margin-top: 50px;
+    margin-left: 200px;
+}
+
+input {
+    border: 2px solid;
+    border-radius: 8px;
+    padding: 12px;
+    width: 270px;
+    background-color: #cfcfd8;
+    margin-bottom: 13px;
+    color: #cfcfd8;
+    margin: 10px;
+    margin-left: 2px;
+
+}
+
+#enviar {
+    width: 200px;
+    margin-left: 50px;
+    padding: 18px;
+    border: #E5C73F;
+    background-color: #E5C73F;
+    color: black;
+    margin-bottom: 120px;
+}
+
+.i-empresa {
+    position: absolute;
+    text-align: right;
+    right: 140px;
+    top: 280px;
+}
+
+.pag-empresa {
+    text-align: center;
+    margin-bottom: 30px;
+}
