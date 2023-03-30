@@ -27,6 +27,8 @@ h2 {
     font-size: 28px;
 }
 
+
+
 /** Banner inicial **/
 
     /** menu **/
@@ -155,6 +157,19 @@ h2 {
 
 /** Ferramentas **/
 
+.fundo-azul-ferramentas {
+    background-color: #3531E0;
+    color: white;
+    width: 95%;
+    padding-top: 13px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+#ferramentas h3 {
+    color: #E5C73F;
+}
+
 #ferramentas {
     text-align: center;
     width: 74%;
@@ -164,7 +179,7 @@ h2 {
 }
 
 #ferramentas h2, #ferramentas h3 {
-    text-align: left;
+    text-align: center;
 }
 
 .ferramentas-cards-div {
@@ -175,6 +190,15 @@ h2 {
     display: inline-block;
     width: 500px;
     padding: 70px;
+}
+
+.titulo-especial {
+    font-weight: bold;
+    color: #E5C73F;
+}
+
+.info-titulo-especial {
+    font-size: 12px;
 }
 
 
@@ -205,8 +229,103 @@ h2 {
 
 /** Depoimentos | Notícias e eventos **/
 
+#avaliacoes-noticias {
+    text-align: center;
+    background-color: #D9D9D9;
+    box-sizing: border-box;
+    width: 95%;
+    margin: 0 auto;
+    padding: 50px
+}
 
 /** Banner CTA **/
 
+.fundo-azul-cta {
+    background-color: #3531E0;
+    box-sizing: border-box;
+    color: white;
+    width: 95%;
+    padding: 150px 0;
+    margin: 0 auto;
+
+}
+
+#banner-cta {
+    text-align: center;
+    width: 40%;
+    margin: 0 auto;
+}
+
+.cta-titulo {
+    width: 50%;
+    margin: 0 auto;
+    font-size: 36px;
+    font-weight: bold;
+    padding-bottom: 30px;
+}
+
+.cta-legenda {
+    line-height: 30px;
+    width: 50%;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+
+.cta-button {
+    margin-top: 50px;
+    border: none;
+    background-color: #E5C73F;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    padding: 15px 70px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 
 /** Footer **/
+
+footer {
+    box-sizing: border-box;
+    background-color: #1E1E26;
+    width: 95%;
+    margin: 0 auto;
+    padding-top: 30px;
+    text-align: center;
+}
+
+.footer-message {
+    font-weight: bold;
+    line-height: 30px;
+    font-size: 16px;
+    width: 30%;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 70px;
+    color: white;
+}
+
+.footer-legendas {
+    color: white;
+    font-size: 10px;
+    display: inline-block;
+}
+
+.footer-media-icons {
+    background-color: #E5C73F;
+    width: 10%;
+    margin: 0 auto;
+    padding: 5px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+
+.footer-media-icons a {
+    padding: 0 5px;
+}
+
+.footer-legendas a {
+    text-decoration: none;
+    color:  white;
+    display: inline-block;
+}
