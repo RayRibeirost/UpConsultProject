@@ -1,2 +1,2 @@
-# UpConsultFrontEndProject
-Parte Front-End do projeto da aplicação web UpConsult
+# UpConsultProject
+Desenvolvimento da aplicação web de consultorias UpConsult
