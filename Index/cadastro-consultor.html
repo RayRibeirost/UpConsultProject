@@ -52,19 +52,19 @@
         <section>
             <h1>Cadastro</h1>
             <p>Preencha os dados solicitados com atenção</p>
-            <form action="dados">
-                <label for="">Nome</label><br>
+            <form action="POST" id="form-consultor">
+                <label for="nome">Nome</label><br>
                 <input type="text" name="nome" id="nome" placeholder=" Digite seu nome"> <br>
-                <label for="">Email</label><br>
+                <label for="email">Email</label><br>
                 <input type="email" name="email" id="email" placeholder=" Digite seu email"><br>
-                <label for="">CPF ou CNPJ</label><br>
-                <input type="text" name="cpf-cnpj" id="cpf-cnpj" placeholder=" Digite Cpf ou CNPJ"> <br>
-                <label for="">Senha</label><br>
+                <label for="cnpj">CNPJ</label><br>
+                <input type="text" name="cnpj" id="cnpj" placeholder=" Digite seu CNPJ"> <br>
+                <label for="senha">Senha</label><br>
                 <input type="password" name="senha" id="senha" placeholder=" Digite sua senha"><br>
-                <label for="">Confirme a senha</label><br>
+                <label for="confsenha">Confirme a senha</label><br>
                 <input type="password" name="confsenha" id="confsenha" placeholder=" Confirme a senha"><br>
-                <label for="Resumo">Um breve resumo sobre sua carreira até então.</label><br><br>
-                <textarea name="" id="texto" cols="30" rows="10">Escreva aqui</textarea><br>
+                <label for="resumo">Um breve resumo sobre sua carreira até então.</label><br><br>
+                <textarea name="resumo" id="texto" cols="30" rows="10" id="resumo">Escreva aqui</textarea><br>
                 <label for="">Dados comprobatórios: Currículo, diplomas e <br>cerificações</label><br><br>
                 <button>Anexar arquivos</button><br>
                 <input type="submit" name="enviar" id="enviar" value="Cadastrar">
