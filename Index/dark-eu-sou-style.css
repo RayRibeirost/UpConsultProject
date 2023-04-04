@@ -1,0 +1,43 @@
+body {
+    background-color: #31313F;
+    font-family: 'Inter', sans-serif;
+}
+
+.escuro-faq ul {
+    list-style: none;
+    text-align: right;
+    right: 50px;
+    position: absolute;
+    top: 45px
+}
+
+
+.titulo-shadow {
+    text-align: center;
+    color: white;
+    margin-bottom: 120px;
+    
+}
+
+div {
+    text-align: center;
+
+}
+
+.opcao-bg-consultor {
+    margin-right: 20px;
+}
+
+.opcao-bg-empresa {
+    margin-left: 20px;
+}
+
+footer {
+    margin-top: 120px;
+    text-align: center;
+
+}
+
+.inferior {
+    text-align: right;
+}
