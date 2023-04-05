@@ -19,7 +19,7 @@ app.use(session({
 }));
 
 app.get("/", async (req, res) => {
-    res.send('./Index/index.html');
+    res.sendFile('../Index/index.html');
 });
 
 app.post("/cadastrarEmpresa", async (req, res) => {
@@ -36,7 +36,7 @@ app.post("/cadastrarEmpresa", async (req, res) => {
         Endereco: req.body.endereco
     })
     .then(() => {
-        return res.status(200).send('./Index/confirmacao-empresa.html');
+        return res.status(200).sendFile('../Index/confirmacao-empresa.html');
     }).catch(() => {
         return res.status(400).json({
             erro: true,
