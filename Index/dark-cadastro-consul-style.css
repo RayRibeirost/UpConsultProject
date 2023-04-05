@@ -1,0 +1,104 @@
+body {
+    background-color: #1E1E26;
+}
+
+.superior-cadastro {
+    text-align: right;
+}
+
+.escuro-faq ul {
+    list-style: none;
+    text-align: right;
+    right: 50px;
+    position: absolute;
+    top: 45px;
+
+}
+
+.seta {
+    text-align: left;
+    left: 50px;
+    position: absolute;
+    top: 45px;
+
+
+}
+
+section h1 {
+    color: white;
+    font-weight: bold;
+    margin-left: 85px;
+    font-family: 'Inter', sans-serif;
+    font-size: 30px;
+}
+
+p {
+    color: white;
+    font-size: 12px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+    font-family: 'Inter', sans-serif;
+    
+}
+
+section {
+    margin-top: 50px;
+    margin-left: 200px;
+    font-family: 'Inte', sans-serif;
+    font-size: 12px;
+    color: #D9D9D9;
+}
+
+#date {
+    color: #a4a4a8;
+  }
+
+input {
+    border: 2px solid;
+    border-radius: 8px;
+    padding: 12px;
+    width: 270px;
+    background-color: white;
+    margin-bottom: 13px;
+    color: white;
+    margin: 10px;
+    margin-left: 2px;
+    font-family: 'Inte', sans-serif;
+
+}
+
+
+#texto {
+    width: 290px;
+    margin-bottom: 10px;
+}
+
+button {
+    margin-bottom: 40px;
+    color: black;
+}
+
+#enviar {
+    width: 200px;
+    margin-left: 50px;
+    padding: 18px;
+    border: #E5C73F;
+    background-color: #E5C73F;
+    color: black;
+    margin-bottom: 120px;
+    font-family: 'Inter', sans-serif;
+}
+
+.i-cadastro {
+    position: absolute;
+    text-align: right;
+    right: 120px;
+    top: 350px;
+
+}
+
+.i-logojgt {
+    text-align: center;
+    margin-bottom: 30px;
+
+}
