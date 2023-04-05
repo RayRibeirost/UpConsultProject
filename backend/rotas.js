@@ -36,10 +36,7 @@ app.post("/cadastrarEmpresa", async (req, res) => {
         Endereco: req.body.endereco
     })
     .then(() => {
-        return res.json({
-            erro: false,
-            mensagem: "Usuário cadastrado com sucesso!"
-        });
+        return res.status(200).send('./Index/confirmacao-empresa.html');
     }).catch(() => {
         return res.status(400).json({
             erro: true,
@@ -65,10 +62,7 @@ app.post("/cadastrarConsultor", async (req, res) => {
         Anexo_Docs: req.body.docs
     })
     .then(() => {
-        return res.json({
-            erro: false,
-            mensagem: "Usuário cadastrado com sucesso!"
-        });
+        return res.status(200).send('./Index/confirmacao-consultor.html');
     }).catch(() => {
         return res.status(400).json({
             erro: true,
