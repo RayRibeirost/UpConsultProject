@@ -23,6 +23,7 @@
         Arquivos locais
     -->
 
+    
     <link rel="stylesheet" href="./cadastro-consultor.style.css">
     <script src="./script.js"></script>
 
@@ -52,12 +53,12 @@
         <section>
             <h1>Cadastro</h1>
             <p>Preencha os dados solicitados com atenção</p>
-            <form action="../Desafio1-JGT/rotas.js/cadastroConsultor" method="post" id="form-consultor">
+            <form action="../backend/rotas.js/cadastroConsultor" method="post" id="form-consultor">
                 <label for="nome">Nome</label><br>
                 <input type="text" name="nome" id="nome" placeholder=" Digite seu nome"> <br>
-                <label for="">Data de Nascimento</label><br>
+                <label for="date">Data de Nascimento</label><br>
                 <input type="date" name="date" id="date" placeholder="dd/mm/aaaa"><br>
-                <label for="genero">Gênero</label><br>
+                <label for="genero">Como você se identifica?</label><br>
                 <select name="genero" id="genero">
                     <option value="homem-cis">Homem cisgênero</option>
                     <option value="homem-trans">Homem transgênero</option>
