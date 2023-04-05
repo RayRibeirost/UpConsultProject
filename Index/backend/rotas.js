@@ -8,6 +8,8 @@ const session = require('express-session');
 
 app.use(express.json());
 
+app.use(express.static('C:/Users/claud/OneDrive/Área de Trabalho/JGT codes/UpConsultProject/Index'));
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
@@ -19,7 +21,7 @@ app.use(session({
 }));
 
 app.get("/", async (req, res) => {
-    res.sendFile('../Index/index.html');
+    res.sendFile('C:/Users/claud/OneDrive/Área de Trabalho/JGT codes/UpConsultProject/Index/index.html');
 });
 
 app.post("/cadastrarEmpresa", async (req, res) => {
