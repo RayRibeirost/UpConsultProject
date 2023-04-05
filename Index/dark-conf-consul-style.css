@@ -1,0 +1,46 @@
+body{
+    font-family:'Inter', sans-serif;
+    background-color: #1E1E26;
+}
+
+.superior-conf {
+     text-align: right;
+}
+
+.seta-conf {
+    text-align: left;
+    left: 100px;
+    position: absolute;
+    top: 45px;
+}
+
+.escuro-confi ul {
+    text-align: right;
+    right: 100px;
+    position: absolute;
+    top: 45px;
+    list-style: none;
+}
+    
+main, h2, p {
+    color: white;
+    text-align: center;
+    margin-top: 10px;
+}
+
+button {
+    width: 200px;
+    padding: 18px;
+    border: 2px solid;
+    border-radius: 8px;
+    border: #E5C73F;
+    background-color: #E5C73F;
+    color: black;
+}
+
+footer {
+text-align: center;
+margin-top: 50px;
+margin-bottom: 50px;
+
+}
