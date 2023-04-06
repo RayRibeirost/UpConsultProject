@@ -54,31 +54,16 @@
             <h1>Cadastro</h1>
             <p>Preencha os dados solicitados com atenção</p>
             <form action="/cadastrarConsultor" method="post" id="form-consultor">
-                <label for="nome">Nome</label><br>
+                <label for="nome">Nome/Razão Social</label><br>
                 <input type="text" name="nome" id="nome" placeholder=" Digite seu nome"> <br>
-                <label for="date">Data de Nascimento</label><br>
-                <input type="date" name="date" id="date" placeholder="dd/mm/aaaa"><br>
-                <label for="genero">Como você se identifica?</label><br>
-                <select name="genero" id="genero">
-                    <option value="homem-cis">Homem cisgênero</option>
-                    <option value="homem-trans">Homem transgênero</option>
-                    <option value="mulher-cis">Mulher cisgênero</option>
-                    <option value="mulher-trans">Mulher transgênero</option>
-                    <option value="nao-binario">Não binário</option>
-                    <option value="outro-oulo">Outro/prefiro não marcar</option>
-                </select><br><br>
-                <label for="email">Email</label><br>
-                <input type="email" name="email" id="email" placeholder=" Digite seu email"><br>
-                <label for="cnpj">CNPJ</label><br>
+                <label for="cnpj">CNPJ <span>00.000.000/0000-00</span></label><br>
                 <input type="text" name="cnpj" id="cnpj" placeholder=" Digite seu CNPJ"> <br>
+                <label for="email">Email <span>prefencialmente corporativo</span></label><br>
+                <input type="email" name="email" id="email" placeholder=" Digite seu email"><br>
                 <label for="senha">Senha</label><br>
                 <input type="password" name="senha" id="senha" placeholder=" Digite sua senha"><br>
                 <label for="confsenha">Confirme a senha</label><br>
                 <input type="password" name="confsenha" id="confsenha" placeholder=" Confirme a senha"><br>
-                <label for="resumo">Um breve resumo sobre sua carreira até então.</label><br><br>
-                <textarea name="resumo" id="texto" cols="30" rows="10" id="resumo">Escreva aqui</textarea><br>
-                <label for="">Dados comprobatórios: Currículo, diplomas e <br>cerificações</label><br><br>
-                <button>Anexar arquivos</button><br>
                 <input type="submit" name="enviar" id="enviar" value="Cadastrar">
             </form>
         </section>

@@ -55,16 +55,16 @@
             <h1>Cadastro</h1>
             <p>Preencha os dados solicitados com atenção</p>
             <form action="/cadastrarEmpresa" method="post" id="form-empresa">
-                <label for="nome">Nome</label><br>
-                <input type="text" name="nome" id="nome" placeholder="Nome"><br>
-                <label for="email">Email</label><br>
-                <input type="email" name="email" id="email" placeholder="email"><br>
-                <label for="cnpj">CNPJ</label><br>
-                <input type="text" name="cnpj" id="cnpj" placeholder="CNPJ"><br>
+                <label for="nome">Nome/Razão Social</label><br>
+                <input type="text" name="nome" id="nome" placeholder=" Digite seu nome"> <br>
+                <label for="cnpj">CNPJ <span>00.000.000/0000-00</span></label><br>
+                <input type="text" name="cnpj" id="cnpj" placeholder=" Digite seu CNPJ"> <br>
+                <label for="email">Email <span>prefencialmente corporativo</span></label><br>
+                <input type="email" name="email" id="email" placeholder=" Digite seu email"><br>
                 <label for="senha">Senha</label><br>
-                <input type="password" name="senha" id="senha" placeholder="********"><br>
+                <input type="password" name="senha" id="senha" placeholder=" Digite sua senha"><br>
                 <label for="confsenha">Confirme a senha</label><br>
-                <input type="password" name="confsenha" id="confsenha" placeholder="********"><br><br>
+                <input type="password" name="confsenha" id="confsenha" placeholder=" Confirme a senha"><br>
                 <input type="submit" name="enviar" id="enviar" value="Cadastrar">
             </form>
         </section>
