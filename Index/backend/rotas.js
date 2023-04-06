@@ -24,6 +24,10 @@ app.get("/", async (req, res) => {
     res.sendFile('C:/Users/claud/OneDrive/Área de Trabalho/JGT codes/UpConsultProject/Index/index.html');
 });
 
+app.get('/cadastrarEmpresa', (req, res) => {
+    res.sendFile('C:/Users/claud/OneDrive/Área de Trabalho/JGT codes/UpConsultProject/Index/cadastro-empresa.html');
+});
+
 app.post("/cadastrarEmpresa", async (req, res) => {
     //console.log(req.body);
 
@@ -38,7 +42,7 @@ app.post("/cadastrarEmpresa", async (req, res) => {
         Endereco: req.body.endereco
     })
     .then(() => {
-        return res.status(200).sendFile('../Index/confirmacao-empresa.html');
+        return res.status(200).sendFile('C:/Users/claud/OneDrive/Área de Trabalho/JGT codes/UpConsultProject/Index/cadastro-empresa.html');
     }).catch(() => {
         return res.status(400).json({
             erro: true,
@@ -46,6 +50,10 @@ app.post("/cadastrarEmpresa", async (req, res) => {
         });
     });
     //res.send("Página cadastrar");
+});
+
+app.get('/cadastrarConsultor', (req, res) => {
+    res.sendFile('C:/Users/claud/OneDrive/Área de Trabalho/JGT codes/UpConsultProject/Index/cadastro-consultor.html');
 });
 
 app.post("/cadastrarConsultor", async (req, res) => {
@@ -64,7 +72,7 @@ app.post("/cadastrarConsultor", async (req, res) => {
         Anexo_Docs: req.body.docs
     })
     .then(() => {
-        return res.status(200).send('./Index/confirmacao-consultor.html');
+        return res.status(200).send('C:/Users/claud/OneDrive/Área de Trabalho/JGT codes/UpConsultProject/Index/cadastro-consultor.html');
     }).catch(() => {
         return res.status(400).json({
             erro: true,
