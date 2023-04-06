@@ -24,6 +24,10 @@ app.get("/", async (req, res) => {
     res.sendFile('C:/Users/claud/OneDrive/Área de Trabalho/JGT codes/UpConsultProject/Index/index.html');
 });
 
+app.get("/Quem-sou-eu", async (req, res) => {
+    res.sendFile('C:/Users/claud/OneDrive/Área de Trabalho/JGT codes/UpConsultProject/Index/quem-sou-eu.html');
+});
+
 app.get('/cadastrarEmpresa', (req, res) => {
     res.sendFile('C:/Users/claud/OneDrive/Área de Trabalho/JGT codes/UpConsultProject/Index/cadastro-empresa.html');
 });
@@ -42,7 +46,7 @@ app.post("/cadastrarEmpresa", async (req, res) => {
         Endereco: req.body.endereco
     })
     .then(() => {
-        return res.status(200).sendFile('C:/Users/claud/OneDrive/Área de Trabalho/JGT codes/UpConsultProject/Index/cadastro-empresa.html');
+        return res.status(200).sendFile('C:/Users/claud/OneDrive/Área de Trabalho/JGT codes/UpConsultProject/Index/confirmacao-empresa.html');
     }).catch(() => {
         return res.status(400).json({
             erro: true,
@@ -72,7 +76,7 @@ app.post("/cadastrarConsultor", async (req, res) => {
         Anexo_Docs: req.body.docs
     })
     .then(() => {
-        return res.status(200).send('C:/Users/claud/OneDrive/Área de Trabalho/JGT codes/UpConsultProject/Index/cadastro-consultor.html');
+        return res.status(200).send('C:/Users/claud/OneDrive/Área de Trabalho/JGT codes/UpConsultProject/Index/confimacao-consultor.html');
     }).catch(() => {
         return res.status(400).json({
             erro: true,
@@ -86,7 +90,7 @@ app.post("/cadastrarConsultor", async (req, res) => {
 // Área de Login
 // Rota para página de login da empresa
 app.get('/loginEmpresa', (req, res) => {
-    res.sendFile(__dirname + './Index/login.html');
+    res.sendFile('C:/Users/claud/OneDrive/Área de Trabalho/JGT codes/UpConsultProject/Index/login.html');
 });
 
 // Rota para processar o login
