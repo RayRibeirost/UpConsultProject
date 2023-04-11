@@ -5,6 +5,16 @@ const cadastroConsultor = require('./models/cadastroConsultor');
 const db2 = require('./models/db2');
 const bodyParser = require('body-parser');
 const session = require('express-session');
+const mysql = require('mysql2');
+
+const connection = mysql.createConnection({
+  host: 'localhost',
+  user: 'root',
+  password: 'Khadidja',
+  database: 'upconsult'
+});
+
+connection.connect();
 
 app.use(express.json());
 
@@ -32,28 +42,18 @@ app.get('/cadastrarEmpresa', (req, res) => {
     res.sendFile('C:/Users/claud/OneDrive/Área de Trabalho/JGT codes/UpConsultProject/Index/cadastro-empresa.html');
 });
 
-app.post("/cadastrarEmpresa", async (req, res) => {
-    //console.log(req.body);
+app.post('/cadastrarEmpresa', (req, res) => {
+  const nome = req.body.nome;
+  const cnpj = req.body.cnpj;
+  const email = req.body.email;
+  const senha = req.body.senha;
+  const confsenha = req.body.confsenha;
 
-    await CadastroEmpresa.create({
-        Nome_Responsavel: req.body.nomeResponsavel,
-        Nome_Empresa: req.body.nomeEmpresa, 
-        CNPJ: req.body.cnpj, 
-        Email: req.body.email, 
-        Senha: req.body.senha,
-        Confsenha: req.body.confsenha,
-        DataNasc_Criacao: req.body.dataNascCriacao,
-        Endereco: req.body.endereco
-    })
-    .then(() => {
-        return res.status(200).sendFile('C:/Users/claud/OneDrive/Área de Trabalho/JGT codes/UpConsultProject/Index/confirmacao-empresa.html');
-    }).catch(() => {
-        return res.status(400).json({
-            erro: true,
-            mensagem: "Erro: Usuário não cadastrado com sucesso!"
-        });
-    });
-    //res.send("Página cadastrar");
+  connection.query('INSERT INTO cadastro_empresas (Nome_Empresa, CNPJ, Email, Senha, Confsenha) VALUES (?, ?, ?, ?, ?)', [nome, cnpj, email, senha, confsenha], (error, results, fields) => {
+    if (error) throw error;
+    console.log('Usuário cadastrado com sucesso');
+    res.sendFile('C:/Users/claud/OneDrive/Área de Trabalho/JGT codes/UpConsultProject/Index/confirmacao-empresa.html');
+  });
 });
 
 app.get('/cadastrarConsultor', (req, res) => {
@@ -68,12 +68,7 @@ app.post("/cadastrarConsultor", async (req, res) => {
         CNPJ: req.body.cnpj, 
         Email: req.body.email, 
         Senha: req.body.senha,
-        Confsenha: req.body.confsenha,
-        Endereco: req.body.endereco,
-        DataNasc: req.body.dataNasc,
-        Sexo: req.body.sexo,
-        Formacao: req.body.formacao,
-        Anexo_Docs: req.body.docs
+        Confsenha: req.body.confsenha
     })
     .then(() => {
         return res.status(200).send('C:/Users/claud/OneDrive/Área de Trabalho/JGT codes/UpConsultProject/Index/confimacao-consultor.html');
