@@ -81,10 +81,10 @@ app.post('/cadastrarConsultor', (req, res) => {
 // Área de Login
 // Rota para página de login da empresa
 app.get('/loginEmpresa', (req, res) => {
-    res.sendFile('C:/Users/claud/OneDrive/Área de Trabalho/JGT codes/UpConsultProject/Index/login.html');
+    res.sendFile('C:/Users/claud/OneDrive/Área de Trabalho/JGT codes/UpConsultProject/Index/login-empresa.html');
 });
 
-// Rota para processar o login
+// Rota para processar o login da empresa
 app.post('/loginEmpresa', (req, res) => {
     const username = req.body.cnpj;
     const password = req.body.senha;
@@ -94,7 +94,7 @@ app.post('/loginEmpresa', (req, res) => {
             if (results.length > 0) {
                 req.session.loggedin = true;
                 req.session.username = username;
-                res.redirect('/homeEmpresa');
+                res.redirect('/plataformaEmpresa');
             } else {
                 res.send('Usuário ou senha incorretos!');
             }
@@ -107,7 +107,7 @@ app.post('/loginEmpresa', (req, res) => {
 });
 
 // Rota para página inicial após o login
-app.get('/homeEmpresa', (req, res) => {
+app.get('/plataformaEmpresa', (req, res) => {
     if (req.session.loggedin) {
         res.send('Bem-vindo(a), ' + req.session.username + '!');
     } else {
@@ -117,20 +117,21 @@ app.get('/homeEmpresa', (req, res) => {
 });
 
 // Rotas para página de login do consultor
-
 app.get('/loginConsultor', (req, res) => {
     res.sendFile(__dirname + './Index/login.html');
 });
 
-// Rota para processar o login
+// Rota para processar o login do consultor
 app.post('/loginConsultor', (req, res) => {
-    const { username, password } = req.body;
-    if (username && password) {
-        db2.query('SELECT * FROM cadastro_Consultor WHERE Email = ? AND Senha = ?', [username, password], (err, results) => {
+    const usernameC = req.body.cnpj;
+    const passwordC = req.body.senha;
+
+    if (usernameC && passwordC) {
+        connection.query('SELECT * FROM cadastro_consultors WHERE CNPJ = ? AND Senha = ?', [usernameC, passwordC], (err, results) => {
             if (results.length > 0) {
                 req.session.loggedin = true;
-                req.session.username = username;
-                res.redirect('/homeConsultor');
+                req.session.username = usernameC;
+                res.redirect('/plataformaConsultor');
             } else {
                 res.send('Usuário ou senha incorretos!');
             }
@@ -143,7 +144,7 @@ app.post('/loginConsultor', (req, res) => {
 });
 
 // Rota para página inicial após o login
-app.get('/homeConsultor', (req, res) => {
+app.get('/plataformaConsultor', (req, res) => {
     if (req.session.loggedin) {
         res.send('Bem-vindo(a), ' + req.session.username + '!');
     } else {
@@ -152,6 +153,7 @@ app.get('/homeConsultor', (req, res) => {
     res.end();
 });
 
+// Início do Servidor
 app.listen(8080, () => {
     console.log("Servidor iniciado na porta 8080: http://localhost:8080");
 });
