@@ -1,6 +1,6 @@
-const Sequelize = require('sequelize');
+/*const Sequelize = require('sequelize');
 
-const sequelize = new Sequelize('upconsult', 'root', 'Senha', {
+const sequelize = new Sequelize('upconsult', 'root', 'Khadidja', {
     host: 'localhost',
     port: 3306,
     dialect: 'mysql',
@@ -16,4 +16,4 @@ sequelize.authenticate()
     console.log("Erro: Conexão com o banco de dados não realizada com sucesso!");
 });
 
-module.exports = sequelize;
+module.exports = sequelize; */
