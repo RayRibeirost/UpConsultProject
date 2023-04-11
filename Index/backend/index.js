@@ -1,4 +1,4 @@
-
+/*
 (async () => {
     const db2 = require("./models/db2");
     const cadastroEmpresa = require('./models/CadastroEmpresa');
@@ -10,4 +10,4 @@
     } catch (error) {
         console.log(error);
     }
-})();
+})(); */
