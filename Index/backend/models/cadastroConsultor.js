@@ -55,5 +55,27 @@ const Cadastro_Consultor = db2.define('Cadastro_Consultor',
     }
 });
 
+app.post("/cadastrarConsultor", async (req, res) => {
+    //console.log(req.body);
+
+    await cadastroConsultor.create({
+        Nome: req.body.nome, 
+        CNPJ: req.body.cnpj, 
+        Email: req.body.email, 
+        Senha: req.body.senha,
+        Confsenha: req.body.confsenha
+    })
+    .then(() => {
+        return res.status(200).send('C:/Users/claud/OneDrive/Área de Trabalho/JGT codes/UpConsultProject/Index/confimacao-consultor.html');
+    }).catch(() => {
+        return res.status(400).json({
+            erro: true,
+            mensagem: "Erro: Usuário não cadastrado com sucesso!"
+        });
+    });
+
+    //res.send("Página cadastrar");
+});
+
 //cadastroConsultor.sync();
 module.exports = Cadastro_Consultor;*/
