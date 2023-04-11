@@ -1,4 +1,4 @@
-const seq = require('sequelize');
+/*const seq = require('sequelize');
 const db2 = require('./db2');
 
 const Cadastro_Consultor = db2.define('Cadastro_Consultor',
@@ -56,4 +56,4 @@ const Cadastro_Consultor = db2.define('Cadastro_Consultor',
 });
 
 //cadastroConsultor.sync();
-module.exports = Cadastro_Consultor;
+module.exports = Cadastro_Consultor;*/
