@@ -1,0 +1,103 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+.sup-login {
+    text-align: right;
+}
+
+.logo-esquerda {
+    left: 100px;
+    position: absolute;
+    top: 80px;
+
+}
+
+.escuro-login ul {
+    list-style: none;
+    text-align: right;
+    right: 100px;
+    position: absolute;
+    top: 45px;
+}
+
+.i-login {
+    position: absolute;
+    left: 100px;
+}
+
+section h1 {
+    color: #121276;
+    font-weight: bold;
+    text-align: right;
+    margin-right: 130px;
+    margin-top: 100px;
+    font-size: 30px;
+}
+
+p {
+    color: #121276;
+    font-size: 12px;
+    text-align: right;
+    margin-bottom: 20px;
+    margin-right: 65px;
+
+}
+
+.cad-login, a {
+    text-align: right;
+    margin-right: 70px;
+    font-size: 12px;
+    color: black;
+
+}
+
+.esqc-passw, a {
+    text-align: right;
+    margin-right: 50px;
+    font-size: 12px;
+    color:black;
+
+}
+
+section {
+    margin-top: 50px;
+    margin-right: 200px;
+    font-size: 12px;
+}
+
+form {
+    text-align: right;
+
+}
+
+label {
+    margin-right: 270px;
+}
+
+input {
+    border: 2px solid;
+    border-radius: 8px;
+    padding: 12px;
+    width: 270px;
+    background-color: #cfcfd8;
+    margin-bottom: 15px;
+    color: black;
+    margin: 10px;
+
+}
+
+
+#enviar {
+    width: 200px;
+    margin-right: 55px;
+    padding: 18px;
+    border: #E5C73F;
+    background-color: #E5C73F;
+    color: black;
+    margin-bottom: 80px;
+}
+
+.pag-login {
+    text-align: center;
+    margin-bottom: 50px;
+}
