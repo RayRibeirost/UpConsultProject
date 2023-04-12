@@ -33,8 +33,16 @@ h2 {
 
     /** menu **/
 
-#menu-principal, .escuro-faq {
+#menu-principal {
     display: inline-block;
+}
+
+.escuro-faq ul {
+    list-style: none;
+    top: 35px;
+    position: absolute;
+    text-align: right;
+    right: 5px;
 }
 
 #menu-principal ul {
@@ -45,11 +53,12 @@ h2 {
 #menu-principal a {
     text-decoration: none;
     color: #121276;
+    
 }
 
 #menu-principal li {
     display: inline-block;
-    margin-right: 50px
+    margin-right: 20px
 }
 
 .item-menu {
@@ -57,7 +66,8 @@ h2 {
 }
 
 #logo-upconsult-nav {
-    margin-right: 80px;
+    margin-right: 45px;
+    margin-top: 30px;
 }
 
 #criar-conta {
@@ -81,18 +91,19 @@ h2 {
 
 .mensagem-inicial {
     position: absolute;
-    left: 350px
+    left: 160px
 }
 
 .imagem-inicial {
-    margin-left: 650px;
-    margin-top: 50px;
+    margin-left: 800px;
+    margin-top: 70px;
     margin-bottom: 70px;
 }
 
 .banner-inicial h1, .banner-inicial p {
     font-family: 'Montserrat', sans-serif;
     text-align: left;
+
 }
 
 .banner-inicial h1 {
@@ -116,38 +127,55 @@ h2 {
 
 /** Sobre **/
 
-#sobre {
-    text-align: center;
-}
-
 #sobre h2 {
-    width: 70%
+    width: 70%;
+    
 }
 
 #sobre p {
     width: 60%;
 }
 
-#imagem-sobre, #sobre-info {
-    text-align: left;
+#imagem-sobre {
+    float:left;
+    margin-left: 150px;
     display: inline-block;
     margin-top: 50px;
     margin-bottom: 50px;
 }
 
-.info-especial-sobre, .info-especial-sobre figure, .info-especial-sobre div {
-    display: inline-block;
+#sobre h3 {
+    position: absolute;
+    margin-left: 680px;
+    margin-top: 42px;
+}
+
+.sobre-info h2 {
+    position:absolute;
+    margin-top: 75px;
+    margin-left: 680px;
+}
+
+.titulo-p {
+    position:absolute;
+    margin-top: 130px;
+    margin-left: 680px;
+   
+}
+
+.info-sobre p {
+    padding-left: 750px;
+    position: absolute;
+    margin-top: 300px;
 
 }
 
-.info-especial-sobre figure {
-    padding-bottom: 50px;
+.info-sobre figure {
+  padding-top: 260px;
+  padding-bottom: 20px;
+    
 }
 
-.titulo-especial-sobre {
-    font-weight: 600;
-    font-size: 20px;
-}
 
 .info-titulo-especial-sobre {
     font-size: 12px;
