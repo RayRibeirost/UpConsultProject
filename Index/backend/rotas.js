@@ -109,7 +109,7 @@ app.post('/loginEmpresa', (req, res) => {
 // Rota para página inicial após o login
 app.get('/plataformaEmpresa', (req, res) => {
     if (req.session.loggedin) {
-        res.send('Bem-vindo(a), ' + req.session.username + '!');
+        res.sendFile('C:/Users/claud/OneDrive/Área de Trabalho/JGT codes/UpConsultProject/Index/upconsult_index.html');
     } else {
         res.send('Por favor, faça o login para ver esta página!');
     }
@@ -118,7 +118,7 @@ app.get('/plataformaEmpresa', (req, res) => {
 
 // Rotas para página de login do consultor
 app.get('/loginConsultor', (req, res) => {
-    res.sendFile(__dirname + './Index/login.html');
+    res.sendFile('C:/Users/claud/OneDrive/Área de Trabalho/JGT codes/UpConsultProject/Index/login-consultor.html');
 });
 
 // Rota para processar o login do consultor
