@@ -84,12 +84,12 @@
     </main>
     
     <!--Atendimento Consultor-->
-    <main>
+    <main id="atendimento-consultor">
 
     </main>
 
     <!--Atendimento Empresa-->
-    <main>
+    <main id="atendimento-empresa">
 
     </main>
 
@@ -99,10 +99,29 @@
         <div id="form-proposta-cosultor">
             <h2>Proposta de solução</h2>
             <div id="card-solicitacao">
-
+                <div>
+                    <figure>
+                        <img src="" alt="" id="proposta-foto-usuario-empresa">
+                    </figure>
+                    <div>
+                        <p id="proposta-nome-empresa"></p>
+                        <p id="proposta-area-consultoria"></p>
+                        <p id="proposta-cidade-empresa"></p>
+                    </div>
+                </div>
+                <div>
+                    <p id="proposta-titulo"></p>
+                    <p id="proposta-descricao-empresa"></p>
+                </div>
             </div>
-            <form action="">
-
+            <form action="" class="form" id="proposta-consultor">
+                <label for="">Descrição da solução</label>
+                <textarea name="" id="" cols="30" rows="10">Escreva aqui</textarea>
+                <label for="data-atendimento-consultor">Sugestão de data para atendimento</label>
+                <input type="date" id="data-atendimento-consultor" name="data-atendimento-consultor">
+                <label for="hora-atendimento-consultor">Sugestão de hora para atendimento</label>
+                <input type="time" id="hora-atendimento-consultor" name="hora-atendimento-consultor">
+                <input type="submit" value="Enviar proposta de solução">
             </form>
         </div>
         <!-- Agenda -->
