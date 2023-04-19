@@ -84,7 +84,7 @@
     </main>
     
     <!--Atendimento Consultor-->
-    <main id="atendimento-consultor">
+    <main id="atendimento-consultor" style>
 
     </main>
 
@@ -115,8 +115,8 @@
                 </div>
             </div>
             <form action="" class="form" id="proposta-consultor">
-                <label for="">Descrição da solução</label>
-                <textarea name="" id="" cols="30" rows="10">Escreva aqui</textarea>
+                <label for="descricao-solucao">Descrição da solução</label>
+                <textarea name="descricao-solucao" id="descricao-solucao" cols="30" rows="10">Escreva aqui</textarea>
                 <label for="data-atendimento-consultor">Sugestão de data para atendimento</label>
                 <input type="date" id="data-atendimento-consultor" name="data-atendimento-consultor">
                 <label for="hora-atendimento-consultor">Sugestão de hora para atendimento</label>
@@ -126,9 +126,20 @@
         </div>
         <!-- Agenda -->
         <div id="agenda-consultor">
-            <h2>agenda</h2>
+            <h2>Agenda</h2>
             <div id="card-agenda-consultor">
-                
+                <figure>
+                    <img src="" alt="" id="agenda-foto-usuario-empresa">
+                </figure>
+                <div>
+                    <p id="agenda-nome-empresa"></p>
+                    <p id="agenda-data-atendimento"></p>
+                </div>
+                <div>
+                    <img src="" alt="" id="agenda-consultor-icone-mensagem">
+                    <img src="" alt="" id="agenda-consultor-icone-ligacao">
+                    <img src="" alt="" id="agenda-consultor-icone-cancelamento">
+                </div>
             </div>
         </div>
         <!-- Área de mensagens em tempo real -->
@@ -142,7 +153,20 @@
         <div id="feedbacks-notificacoes-consultor">
             <h2>Notificações</h2>
             <div id="feedback-consultor">
-
+                <div>
+                    <figure>
+                        <img src="" alt="" id="feedback-consultor-imagem-empresa">
+                    </figure>
+                </div>
+                <div>
+                    <p id="feedback-consultor-nome-empresa"></p>
+                    <p id="feedback-consultor-cidade-empresa"></p>
+                </div>
+                <div>
+                    <p id="feedback-consultor-titulo"></p>
+                    <p id="feedback-consultor-descricao"></p>
+                    <button>Publicar Feedback</button>
+                </div>
             </div>
         </div>
     </aside>
