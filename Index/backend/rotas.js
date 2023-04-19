@@ -1,24 +1,29 @@
+// Constantes Globais
 const express = require('express');
 const app = express();
-const CadastroEmpresa = require('./models/CadastroEmpresa');
-const cadastroConsultor = require('./models/cadastroConsultor');
-const db2 = require('./models/db2');
 const bodyParser = require('body-parser');
 const session = require('express-session');
 const mysql = require('mysql2');
 
+// Conexão com o banco de dados 
 const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: 'Khadidja',
-  database: 'upconsult'
-});
-
-connection.connect();
+    host: 'localhost',
+    user: 'root',
+    password: 'Khadidja',
+    database: 'upconsult'
+  });
+  
+  connection.connect((error) => {
+        if (error) {
+          console.error('Erro ao conectar ao banco de dados:', error);
+          return;
+        }
+        console.log('Conexão bem-sucedida com o banco de dados!');
+    });
 
 app.use(express.json());
 
-app.use(express.static('C:/Users/claud/OneDrive/Área de Trabalho/JGT codes/UpConsultProject/Index'));
+app.use(express.static('/home/mvpjgt/public_html'));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -32,17 +37,17 @@ app.use(session({
 
 // Rota Home da página
 app.get("/", async (req, res) => {
-    res.sendFile('C:/Users/claud/OneDrive/Área de Trabalho/JGT codes/UpConsultProject/Index/index.html');
+    res.sendFile('/home/mvpjgt/public_html/index.html');
 });
 
 // Rota Quem sou eu 
 app.get("/Quem-sou-eu", async (req, res) => {
-    res.sendFile('C:/Users/claud/OneDrive/Área de Trabalho/JGT codes/UpConsultProject/Index/quem-sou-eu.html');
+    res.sendFile('/home/mvpjgt/public_html/quem-sou-eu.html');
 });
 
 // Rota Cadastrar Empresa
 app.get('/cadastrarEmpresa', (req, res) => {
-    res.sendFile('C:/Users/claud/OneDrive/Área de Trabalho/JGT codes/UpConsultProject/Index/cadastro-empresa.html');
+    res.sendFile('/home/mvpjgt/public_html/cadastro-empresa.html');
 });
 
 app.post('/cadastrarEmpresa', (req, res) => {
@@ -55,13 +60,13 @@ app.post('/cadastrarEmpresa', (req, res) => {
   connection.query('INSERT INTO cadastro_empresas (Nome_Empresa, CNPJ, Email, Senha, Confsenha) VALUES (?, ?, ?, ?, ?)', [nome, cnpj, email, senha, confsenha], (error, results, fields) => {
     if (error) throw error;
     console.log('Usuário cadastrado com sucesso');
-    res.sendFile('C:/Users/claud/OneDrive/Área de Trabalho/JGT codes/UpConsultProject/Index/confirmacao-empresa.html');
+    res.sendFile('/home/mvpjgt/public_html/confirmacao-empresa.html');
   });
 });
 
 // Rota Cadastrar Consultor
 app.get('/cadastrarConsultor', (req, res) => {
-    res.sendFile('C:/Users/claud/OneDrive/Área de Trabalho/JGT codes/UpConsultProject/Index/cadastro-consultor.html');
+    res.sendFile('/home/mvpjgt/public_html/cadastro-consultor.html');
 });
 
 app.post('/cadastrarConsultor', (req, res) => {
@@ -74,14 +79,14 @@ app.post('/cadastrarConsultor', (req, res) => {
   connection.query('INSERT INTO cadastro_consultors (Nome, CNPJ, Email, Senha, Confsenha) VALUES (?, ?, ?, ?, ?)', [nomeC, cnpjC, emailC, senhaC, confsenhaC], (error, results, fields) => {
     if (error) throw error;
     console.log('Usuário cadastrado com sucesso');
-    res.sendFile('C:/Users/claud/OneDrive/Área de Trabalho/JGT codes/UpConsultProject/Index/confirmacao-empresa.html');
+    res.sendFile('/home/mvpjgt/public_html/confirmacao-consultor.html');
   });
 });
 
 // Área de Login
 // Rota para página de login da empresa
 app.get('/loginEmpresa', (req, res) => {
-    res.sendFile('C:/Users/claud/OneDrive/Área de Trabalho/JGT codes/UpConsultProject/Index/login-empresa.html');
+    res.sendFile('/home/mvpjgt/public_html/login-empresa.html');
 });
 
 // Rota para processar o login da empresa
@@ -109,7 +114,7 @@ app.post('/loginEmpresa', (req, res) => {
 // Rota para página inicial após o login
 app.get('/plataformaEmpresa', (req, res) => {
     if (req.session.loggedin) {
-        res.sendFile('C:/Users/claud/OneDrive/Área de Trabalho/JGT codes/UpConsultProject/Index/upconsult_index.html');
+        res.sendFile('/home/mvpjgt/public_html/upconsult_index.html');
     } else {
         res.send('Por favor, faça o login para ver esta página!');
     }
@@ -118,7 +123,7 @@ app.get('/plataformaEmpresa', (req, res) => {
 
 // Rotas para página de login do consultor
 app.get('/loginConsultor', (req, res) => {
-    res.sendFile('C:/Users/claud/OneDrive/Área de Trabalho/JGT codes/UpConsultProject/Index/login-consultor.html');
+    res.sendFile('/home/mvpjgt/public_html/login-consultor.html');
 });
 
 // Rota para processar o login do consultor
@@ -151,6 +156,21 @@ app.get('/plataformaConsultor', (req, res) => {
         res.send('Por favor, faça o login para ver esta página!');
     }
     res.end();
+});
+
+app.get('/plataformaEmpresa/feed', (req, res) => {
+    // Query SQL para buscar as postagens mais recentes na tabela
+    const query = 'SELECT * FROM posts ORDER BY created_at DESC LIMIT 10';
+    // Executar a query no banco de dados
+    connection.query(query, (error, results) => {
+      if (error) {
+        console.error('Erro ao buscar as postagens:', error);
+        res.status(500).send('Erro ao buscar as postagens.');
+        return;
+      }
+      // Renderizar as postagens na página HTML
+      res.render('feed', { posts: results });
+    });
 });
 
 // Início do Servidor
