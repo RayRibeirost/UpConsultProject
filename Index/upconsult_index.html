@@ -124,7 +124,7 @@
                 <input type="submit" value="Enviar proposta de solução">
             </form>
         </div>
-        <!-- Agenda -->
+        <!-- Agenda consultor -->
         <div id="agenda-consultor">
             <h2>Agenda</h2>
             <div id="card-agenda-consultor">
@@ -174,9 +174,100 @@
     <!-- Área de notificações empresa -->
     <aside id="forms-mensagens-empresa">
         <!--Form de solicitação de consultoria-->
+        <div id="form-empresa-solicitacao-consultoria">
+        <h2>Solicitação de consultoria</h2>
         <form action="">
-            
+            <label for="titulo-solicitacao-empresa">Título da solicitação</label>
+            <input type="text" name="titulo-solicitacao-empresa" id="titulo-solicitacao-empresa">
+            <label for="descricao-solicitacao-empresa">Descrição de solicitação</label>
+            <textarea name="descricao-solicitacao-empresa" id="descricao-solicitacao-empresa" cols="30" rows="10">Escreva aqui</textarea>
+            <label for="area-de-consultoria-empresa">Área de consutolria</label>
+            <select name="area-de-consultoria-empresa" id="area-de-consultoria-empresa">
+                <option value="vendas">Vendas</option>
+                <option value="gestao">Gestão</option>
+                <option value="finanças">Finanças</option>
+                <option value="MKT">Marketing</option>
+                <option value="RH">Recursos Humanos</option>
+                <option value="TI">Tecnologia da informação</option>
+                <option value="sustentabilidade">Sustentabilidade</option>
+            </select>
+            <input type="submit" name="enviar-solicitacao" id="enviar-solicitacao" value="Enviar solicitação de consultoria">
         </form>
+        </div>
+        <!-- mensagens da empresa -->
+        <div id="mensagem-resposta-solicitacao-empresa">
+            <div id="resposta-resumo-solicitacao">
+                <div id="foto-empresa-solicitacao">
+                    <figure>
+                        <img src="" alt="">
+                    </figure>
+                    <div id="info-empresa-solicitacao">
+                        <p></p>
+                        <p></p>
+                    </div>
+                </div>
+                <div id="mensagem-descricao-solicitacao">
+                    <p></p>
+                    <p></p>
+                </div>
+                <div id="card-resposta-consultor">
+                    <div id="info-consultor-resposta">
+                        <figure id="foto-consultor-solicitacao">
+                            <img src="" alt="">
+                        </figure>
+                        <div id="info-consultor-solicitacao">
+                            <p></p>
+                            <p></p>
+                        </div>
+                    </div>
+                    <div id="mensagem-resposta-solicitacao">
+                        <p></p>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+            <div id="botoes-mensagem-empresa">
+                <button id="aceitar-empresa">Aceitar Proposta</button>
+                <button id="analisar-empresa">Recusar/Analisar</button>
+            </div>
+        </div>
+        <!--Agenda consultoria empresa-->
+        <div id="agenda-empresa">
+            <h2>Agenda</h2>
+            <div id="card-agenda-empresa">
+                <figure>
+                    <img src="" alt="" id="agenda-foto-usuario-consultor">
+                </figure>
+                <div>
+                    <p id="agenda-nome-consultor"></p>
+                    <p id="agenda-data-atendimento-empresa"></p>
+                </div>
+                <div>
+                    <img src="" alt="" id="agenda-empresa-icone-mensagem">
+                    <img src="" alt="" id="agenda-empresa-icone-ligacao">
+                    <img src="" alt="" id="agenda-empresa-icone-cancelamento">
+                </div>
+            </div>
+        </div>
+        <!--Formulário de feedback-->
+        <div id="form-feedback-empresa">
+            <div>
+                <figure>
+                    <img src="" alt="">
+                </figure>
+                <div>
+                    <p></p>
+                    <p></p>
+                </div>
+            </div>
+            <form action="" id="form-empresa-feedback">
+                <label for="titulo-feedback">Título do feedback</label>
+                <input type="text" name="titulo-feedback" id="titulo-feedback">
+                <label for="descricao-feedback">Descreva a experiência</label>
+                <textarea name="descricao-feedback" id="descricao-feedback" cols="30" rows="10">Escreva aqui</textarea>
+                <input type="submit" value="Enviar feedback">
+            </form>
+        </div>
     </aside>
 
 </body>
