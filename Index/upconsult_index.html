@@ -23,8 +23,8 @@
 <body>
 
     <!-- Menu principal -->
-    <header id="menu-principal">
-        <figure id="imagem-logo">
+    <header class="menu-principal">
+        <figure class="imagem-logo">
             <img src="./Resources/Plataforma/geral-logo-amarela.png" alt="">
         </figure>
         <nav id="menu-opcoes">
@@ -47,27 +47,27 @@
 
 
     <!-- Parte principal do consultor -->
-    <main id="principal-consultor">
+    <main class="principal-consultor">
         <section class="info-principais">
-            <div>
-                <figure>
-
+            <div class="info-principais-card">
+                <figure class="info-principais-foto-perfil">
+                    <img src="./Resources/Plataforma/geral-foto-perfil-three.png" alt="" id="info-principais-foto-consultor">
                 </figure>
                 <div>
-                    <p></p>
-                    <p></p>
+                    <p class="info-principais-nome-consultor">Nome da empresa do consultor</p>
+                    <p class="info-principais-localizacao-consultor">Localização da empresa</p>
                 </div>
             </div>
-            <div>
-                <img src="" alt="">
+            <div class="info-principais-card-atendimento-consultor">
+                <img src="./Resources/Plataforma/geral-atendimento.png" alt="">
             </div>
-            <div>
-                <img src="" alt=""></div>
+            <div class="info-principais-criar-feed-consultor">
+                <img src="./Resources/Plataforma/consultor-criar-feed.png" alt=""></div>
         </section>
-        <section class="feed-comunidade">
-            <div class="feed">
+        <section class="feed-comunidade-consultor">
+            <div class="feed-consultor">
                 <h2>Feed</h2>
-                <div class="feed-card">
+                <div class="feed-card-consultor">
 
                 </div>
             </div>
@@ -81,7 +81,7 @@
     </main>
 
     <!-- Parte principal da empresa -->
-    <main id="principal-empresa" style="display: none;">
+    <main class="principal-empresa" style="display: none;">
         <section class="info-principais">
 
         </section>
@@ -103,34 +103,34 @@
     </main>
     
     <!--Atendimento Consultor-->
-    <main id="atendimento-consultor" style="display:none;">
+    <main class="atendimento-consultor" style="display:none;">
 
     </main>
 
     <!--Atendimento Empresa-->
-    <main id="atendimento-empresa" style="display:none;">
+    <main class="atendimento-empresa" style="display:none;">
 
     </main>
 
     <!-- Área de notificações consultor -->
-    <aside id="forms-mensagens-consultor">
+    <aside class="forms-mensagens-consultor">
         <!-- Form de proposta de solução -->
-        <div id="form-proposta-cosultor">
+        <div class="form-proposta-cosultor">
             <h2>Proposta de solução</h2>
-            <div id="card-solicitacao">
+            <div class="card-solicitacao">
                 <div>
                     <figure>
-                        <img src="" alt="" id="proposta-foto-usuario-empresa">
+                        <img src="" alt="" class="proposta-foto-usuario-empresa">
                     </figure>
                     <div>
-                        <p id="proposta-nome-empresa"></p>
-                        <p id="proposta-area-consultoria"></p>
-                        <p id="proposta-cidade-empresa"></p>
+                        <p class="proposta-nome-empresa"></p>
+                        <p class="proposta-area-consultoria"></p>
+                        <p class="proposta-cidade-empresa"></p>
                     </div>
                 </div>
                 <div>
-                    <p id="proposta-titulo"></p>
-                    <p id="proposta-descricao-empresa"></p>
+                    <p class="proposta-titulo"></p>
+                    <p class="proposta-descricao-empresa"></p>
                 </div>
             </div>
             <form action="" class="form" id="proposta-consultor">
@@ -145,48 +145,48 @@
         </div>
 
         <!-- Agenda consultor -->
-        <div id="agenda-consultor">
+        <div class="agenda-consultor">
             <h2>Agenda</h2>
-            <div id="card-agenda-consultor">
+            <div class="card-agenda-consultor">
                 <figure>
-                    <img src="" alt="" id="agenda-foto-usuario-empresa">
+                    <img src="" alt="" class="agenda-foto-usuario-empresa">
                 </figure>
                 <div>
-                    <p id="agenda-nome-empresa"></p>
-                    <p id="agenda-data-atendimento"></p>
+                    <p class="agenda-nome-empresa"></p>
+                    <p class="agenda-data-atendimento"></p>
                 </div>
                 <div>
-                    <img src="" alt="" id="agenda-consultor-icone-mensagem">
-                    <img src="" alt="" id="agenda-consultor-icone-ligacao">
-                    <img src="" alt="" id="agenda-consultor-icone-cancelamento">
+                    <img src="" alt="" class="agenda-consultor-icone-mensagem">
+                    <img src="" alt="" class="agenda-consultor-icone-ligacao">
+                    <img src="" alt="" class="agenda-consultor-icone-cancelamento">
                 </div>
             </div>
         </div>
 
         <!-- Área de mensagens em tempo real -->
-        <div id="mensagens-live-consultor">
+        <div class="mensagens-live-consultor" style="display:none">
             <h2>Mensagens da chamada</h2>
-            <div id="mensagens-consultor">
+            <div class="mensagens-consultor">
 
             </div>
         </div>
 
         <!--Área de feedbacks recebidos-->
-        <div id="feedbacks-notificacoes-consultor">
+        <div class="feedbacks-notificacoes-consultor">
             <h2>Notificações</h2>
-            <div id="feedback-consultor">
+            <div class="feedback-consultor">
                 <div>
                     <figure>
-                        <img src="" alt="" id="feedback-consultor-imagem-empresa">
+                        <img src="" alt="" class="feedback-consultor-imagem-empresa">
                     </figure>
                 </div>
                 <div>
-                    <p id="feedback-consultor-nome-empresa"></p>
-                    <p id="feedback-consultor-cidade-empresa"></p>
+                    <p class="feedback-consultor-nome-empresa"></p>
+                    <p class="feedback-consultor-cidade-empresa"></p>
                 </div>
                 <div>
-                    <p id="feedback-consultor-titulo"></p>
-                    <p id="feedback-consultor-descricao"></p>
+                    <p class="feedback-consultor-titulo"></p>
+                    <p class="feedback-consultor-descricao"></p>
                     <button>Publicar Feedback</button>
                 </div>
             </div>
@@ -194,9 +194,9 @@
     </aside>
 
     <!-- Área de notificações empresa -->
-    <aside id="forms-mensagens-empresa" style="display:none;">
+    <aside class="forms-mensagens-empresa" style="display:none;">
         <!--Form de solicitação de consultoria-->
-        <div id="form-empresa-solicitacao-consultoria">
+        <div class="form-empresa-solicitacao-consultoria">
         <h2>Solicitação de consultoria</h2>
         <form action="">
             <label for="titulo-solicitacao-empresa">Título da solicitação</label>
@@ -217,62 +217,64 @@
         </form>
         </div>
         <!-- mensagens da empresa -->
-        <div id="mensagem-resposta-solicitacao-empresa">
-            <div id="resposta-resumo-solicitacao">
-                <div id="foto-empresa-solicitacao">
+        <div class="mensagem-resposta-solicitacao-empresa">
+            <div class="resposta-resumo-solicitacao">
+                <div class="foto-empresa-solicitacao">
                     <figure>
                         <img src="" alt="">
                     </figure>
-                    <div id="info-empresa-solicitacao">
+                    <div class="info-empresa-solicitacao">
                         <p></p>
                         <p></p>
                     </div>
                 </div>
-                <div id="mensagem-descricao-solicitacao">
+                <div class="mensagem-descricao-solicitacao">
                     <p></p>
                     <p></p>
                 </div>
-                <div id="card-resposta-consultor">
-                    <div id="info-consultor-resposta">
-                        <figure id="foto-consultor-solicitacao">
+                <div class="card-resposta-consultor">
+                    <div class="info-consultor-resposta">
+                        <figure class="foto-consultor-solicitacao">
                             <img src="" alt="">
                         </figure>
-                        <div id="info-consultor-solicitacao">
+                        <div class="info-consultor-solicitacao">
                             <p></p>
                             <p></p>
                         </div>
                     </div>
-                    <div id="mensagem-resposta-solicitacao">
+                    <div class="mensagem-resposta-solicitacao">
                         <p></p>
                         <p></p>
                     </div>
                 </div>
             </div>
-            <div id="botoes-mensagem-empresa">
-                <button id="aceitar-empresa">Aceitar Proposta</button>
-                <button id="analisar-empresa">Recusar/Analisar</button>
+            <div class="botoes-mensagem-empresa">
+                <button class="aceitar-empresa">Aceitar Proposta</button>
+                <button class="analisar-empresa">Recusar/Analisar</button>
             </div>
         </div>
+
         <!--Agenda consultoria empresa-->
-        <div id="agenda-empresa">
+        <div class="agenda-empresa">
             <h2>Agenda</h2>
-            <div id="card-agenda-empresa">
+            <div class="card-agenda-empresa">
                 <figure>
-                    <img src="" alt="" id="agenda-foto-usuario-consultor">
+                    <img src="" alt="" class="agenda-foto-usuario-consultor">
                 </figure>
                 <div>
-                    <p id="agenda-nome-consultor"></p>
-                    <p id="agenda-data-atendimento-empresa"></p>
+                    <p class="agenda-nome-consultor"></p>
+                    <p class="agenda-data-atendimento-empresa"></p>
                 </div>
                 <div>
-                    <img src="" alt="" id="agenda-empresa-icone-mensagem">
-                    <img src="" alt="" id="agenda-empresa-icone-ligacao">
-                    <img src="" alt="" id="agenda-empresa-icone-cancelamento">
+                    <img src="" alt="" class="agenda-empresa-icone-mensagem">
+                    <img src="" alt="" class="agenda-empresa-icone-ligacao">
+                    <img src="" alt="" class="agenda-empresa-icone-cancelamento">
                 </div>
             </div>
         </div>
+        
         <!--Formulário de feedback-->
-        <div id="form-feedback-empresa">
+        <div class="form-feedback-empresa">
             <div>
                 <figure>
                     <img src="" alt="">
