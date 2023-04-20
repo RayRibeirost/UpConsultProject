@@ -1,0 +1,23 @@
+body {
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+header {
+    background: linear-gradient(177.57deg, #5248F8 0.93%, #121276 103.02%);
+}
+
+main {
+    
+}
+
+aside {
+    background-color: #F3F1F1;
+}
+
+ul {
+    list-style: none;
+}
