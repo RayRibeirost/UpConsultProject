@@ -10,6 +10,13 @@
         FONTES:
             font-family: 'Inter', sans-serif;
             font-family: 'Montserrat', sans-serif;
+
+        CORES PRINCIPAIS:
+            azul: #121276
+            amarelo: #E5C73F
+            cinza claro: #D9D9D9
+            cinza escuro: #1E1E26
+            verde: #0B9F08
     -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -95,7 +102,20 @@
             <div class="comunidade">
                 <h2>Comunidade</h2>
                 <div class="comunidade-card">
-
+                    <div class="comunidade-card-perfil-consultor">
+                        <figure class="comunidade-foto-consultor">
+                            <img src="" alt="">
+                        </figure>
+                        <div class="comunidade-card-info-consultor">
+                            <p>Nome do consultor</p>
+                            <p>Cidade do consultor</p>
+                        </div>
+                    </div>
+                    <div class="comunidade-card-case">
+                        <p class="comunidade-card-case-titulo">Olá, comunidade, tenho um case grande que precisa de mais um consultor para ajudar.</p>
+                        <p class="comunidade-card-case-descricao">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
+                        <button class="comunidade-card-botao-parceria">Aceitar parceria</button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -110,7 +130,7 @@
             <div class="feed">
                 <h2>Feed</h2>
                 <div class="feed-card">
-
+                    
                 </div>
             </div>
             <div class="comunidade">
@@ -141,27 +161,27 @@
             <div class="card-solicitacao">
                 <div>
                     <figure>
-                        <img src="" alt="" class="proposta-foto-usuario-empresa">
+                        <img src="./Resources/Plataforma/geral-foto-perfil-two.png" alt="" class="proposta-foto-usuario-empresa">
                     </figure>
                     <div>
-                        <p class="proposta-nome-empresa"></p>
-                        <p class="proposta-area-consultoria"></p>
-                        <p class="proposta-cidade-empresa"></p>
+                        <p class="proposta-nome-empresa">Nome da empresa</p>
+                        <p class="proposta-area-consultoria" style="display:none"></p>
+                        <p class="proposta-cidade-empresa">Cidade da empresa</p>
                     </div>
                 </div>
                 <div>
-                    <p class="proposta-titulo"></p>
-                    <p class="proposta-descricao-empresa"></p>
+                    <p class="proposta-titulo">Precisamos de ajuda! Vendas despencando!</p>
+                    <p class="proposta-descricao-empresa">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
                 </div>
             </div>
             <form action="" class="form" id="proposta-consultor">
-                <label for="descricao-solucao">Descrição da solução</label>
-                <textarea name="descricao-solucao" id="descricao-solucao" cols="30" rows="10">Escreva aqui</textarea>
-                <label for="data-atendimento-consultor">Sugestão de data para atendimento</label>
-                <input type="date" id="data-atendimento-consultor" name="data-atendimento-consultor">
-                <label for="hora-atendimento-consultor">Sugestão de hora para atendimento</label>
-                <input type="time" id="hora-atendimento-consultor" name="hora-atendimento-consultor">
-                <input type="submit" value="Enviar proposta de solução">
+                <label for="descricao-solucao">Descrição da solução</label><br>
+                <textarea name="descricao-solucao" id="descricao-solucao" cols="30" rows="10">Escreva aqui</textarea><br>
+                <label for="data-atendimento-consultor">Sugestão de data para atendimento</label><br>
+                <input type="date" id="data-atendimento-consultor" name="data-atendimento-consultor"><br>
+                <label for="hora-atendimento-consultor">Sugestão de hora para atendimento</label><br>
+                <input type="time" id="hora-atendimento-consultor" name="hora-atendimento-consultor"><br>
+                <input type="submit" value="Enviar proposta de solução"><br>
             </form>
         </div>
 
@@ -170,16 +190,16 @@
             <h2>Agenda</h2>
             <div class="card-agenda-consultor">
                 <figure>
-                    <img src="" alt="" class="agenda-foto-usuario-empresa">
+                    <img src="./Resources/Plataforma/geral-foto-perfil-two.png" alt="" class="agenda-foto-usuario-empresa">
                 </figure>
                 <div>
-                    <p class="agenda-nome-empresa"></p>
-                    <p class="agenda-data-atendimento"></p>
+                    <p class="agenda-nome-empresa">Nome da empresa</p>
+                    <p class="agenda-data-atendimento">Horário do atendimento 00:00</p>
                 </div>
                 <div>
-                    <img src="" alt="" class="agenda-consultor-icone-mensagem">
-                    <img src="" alt="" class="agenda-consultor-icone-ligacao">
-                    <img src="" alt="" class="agenda-consultor-icone-cancelamento">
+                    <img src="./Resources/Plataforma/geral-agenda-texto.png" alt="" class="agenda-consultor-icone-mensagem">
+                    <img src="./Resources/Plataforma/geral-agenda-ligacao.png" alt="" class="agenda-consultor-icone-ligacao">
+                    <img src="./Resources/Plataforma/geral-agenda-cancelamento.png" alt="" class="agenda-consultor-icone-cancelamento">
                 </div>
             </div>
         </div>
@@ -198,33 +218,34 @@
             <div class="feedback-consultor">
                 <div>
                     <figure>
-                        <img src="" alt="" class="feedback-consultor-imagem-empresa">
+                        <img src="Resources/Plataforma/geral-foto-perfil-one.png" alt="" class="feedback-consultor-imagem-empresa">
                     </figure>
                 </div>
                 <div>
-                    <p class="feedback-consultor-nome-empresa"></p>
-                    <p class="feedback-consultor-cidade-empresa"></p>
+                    <p class="feedback-consultor-nome-empresa">Nome da empresa</p>
+                    <p class="feedback-consultor-cidade-empresa">Cidade da empresa</p>
                 </div>
                 <div>
-                    <p class="feedback-consultor-titulo"></p>
-                    <p class="feedback-consultor-descricao"></p>
-                    <button>Publicar Feedback</button>
+                    <p class="feedback-consultor-titulo">Obrigado por nos ajudar!</p>
+                    <p class="feedback-consultor-descricao">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
+                    <button class="feedback-consultor-botao-publicar">Publicar Feedback</button>
                 </div>
             </div>
         </div>
     </aside>
 
     <!-- Área de notificações empresa -->
+
     <aside class="forms-mensagens-empresa" style="display:none;">
         <!--Form de solicitação de consultoria-->
         <div class="form-empresa-solicitacao-consultoria">
         <h2>Solicitação de consultoria</h2>
         <form action="">
-            <label for="titulo-solicitacao-empresa">Título da solicitação</label>
-            <input type="text" name="titulo-solicitacao-empresa" id="titulo-solicitacao-empresa">
-            <label for="descricao-solicitacao-empresa">Descrição de solicitação</label>
-            <textarea name="descricao-solicitacao-empresa" id="descricao-solicitacao-empresa" cols="30" rows="10">Escreva aqui</textarea>
-            <label for="area-de-consultoria-empresa">Área de consutolria</label>
+            <label for="titulo-solicitacao-empresa">Título da solicitação</label><br>
+            <input type="text" name="titulo-solicitacao-empresa" id="titulo-solicitacao-empresa"><br>
+            <label for="descricao-solicitacao-empresa">Descrição de solicitação</label><br>
+            <textarea name="descricao-solicitacao-empresa" id="descricao-solicitacao-empresa" cols="30" rows="10">Escreva aqui</textarea><br>
+            <label for="area-de-consultoria-empresa">Área de consutolria</label><br>
             <select name="area-de-consultoria-empresa" id="area-de-consultoria-empresa">
                 <option value="vendas">Vendas</option>
                 <option value="gestao">Gestão</option>
@@ -233,8 +254,8 @@
                 <option value="RH">Recursos Humanos</option>
                 <option value="TI">Tecnologia da informação</option>
                 <option value="sustentabilidade">Sustentabilidade</option>
-            </select>
-            <input type="submit" name="enviar-solicitacao" id="enviar-solicitacao" value="Enviar solicitação de consultoria">
+            </select><br>
+            <input type="submit" name="enviar-solicitacao" id="enviar-solicitacao" value="Enviar solicitação de consultoria"><br>
         </form>
         </div>
         <!-- mensagens da empresa -->
@@ -306,11 +327,11 @@
                 </div>
             </div>
             <form action="" id="form-empresa-feedback">
-                <label for="titulo-feedback">Título do feedback</label>
-                <input type="text" name="titulo-feedback" id="titulo-feedback">
-                <label for="descricao-feedback">Descreva a experiência</label>
-                <textarea name="descricao-feedback" id="descricao-feedback" cols="30" rows="10">Escreva aqui</textarea>
-                <input type="submit" value="Enviar feedback">
+                <label for="titulo-feedback">Título do feedback</label><br>
+                <input type="text" name="titulo-feedback" id="titulo-feedback"><br>
+                <label for="descricao-feedback">Descreva a experiência</label><br>
+                <textarea name="descricao-feedback" id="descricao-feedback" cols="30" rows="10">Escreva aqui</textarea><br>
+                <input type="submit" value="Enviar feedback"><br>
             </form>
         </div>
     </aside>
