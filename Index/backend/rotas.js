@@ -27,7 +27,9 @@ const connection = mysql.createConnection({
 
 app.use(express.json());
 
-app.set('view engine', 'ejs');
+// Configuração do EJS como template engine
+app.set('views', './views');
+app.set('view engine', 'ejs'); 
 
 app.use(express.static('C:/Users/claud/OneDrive/Área de Trabalho/JGT codes/UpConsultProject/Index'));
 
@@ -164,9 +166,9 @@ app.get('/plataformaConsultor', (req, res) => {
     res.end();
 });
 
-app.get('/plataformaEmpresa/feed', (req, res) => {
+app.get('/plataformaConsultor/feed', (req, res) => {
     // Query SQL para buscar as postagens mais recentes na tabela
-    const query = 'SELECT * FROM posts ORDER BY created_at DESC LIMIT 10';
+    const query = 'SELECT * FROM solicitacao';
     // Executar a query no banco de dados
     connection.query(query, (error, results) => {
       if (error) {
@@ -175,27 +177,55 @@ app.get('/plataformaEmpresa/feed', (req, res) => {
         return;
       }
       // Renderizar as postagens na página HTML
-      res.render('feed.ejs', { posts: results });
+      res.render('upconsult_index.html', { solicitacao: results });
     });
-});
+}); 
 
 // Rota POST para a postagem
-app.post('/plataformaEmpresa/feed', (req, res) => {
-    const { titulo, conteudo, autor } = req.body;
+app.post('/plataformaConsultor/feed', (req, res) => {
+    const nome = req.session.nome
+    const titulo = req.body.titulo; 
+    const conteudo  = req.body.conteudo;
   
     // Inserção dos dados no banco de dados
-    const postagens = `INSERT INTO postagens (titulo, conteudo, autor) VALUES ('${titulo}', '${conteudo}', '${autor}')`;
+    const posts = `INSERT INTO solicitacao (nome, titulo, conteudo) VALUES ('${nome}', '${titulo}', '${conteudo}')`;
   
-    connection.query(postagens, (err, result) => {
+    connection.query(posts, (err, result) => {
       if (err) {
         console.error('Erro ao inserir os dados no banco de dados:', err);
         res.status(500).send('Erro ao inserir os dados no banco de dados');
       } else {
         console.log('Dados inseridos com sucesso no banco de dados');
-        res.send('Dados inseridos com sucesso no banco de dados');
+        res.redirect('/plataformaConsultor/feed');
       }
     });
-  });
+});
+
+// Define as rotas do sistema de agendamento
+app.get('/plataformaConsultor/agendamento', (req, res) => {
+    connection.query('SELECT * FROM agendamentos ORDER BY data ASC', (error, results) => {
+        if (error) {
+          console.error('Erro ao buscar os agendamentos:', error);
+          res.status(500).send('Erro ao buscar os agendamentos');
+        } else {
+         res.render('upconsult_index.html', { agendamentos: results });
+        }
+    });
+});
+
+app.post('/plataformaConsultor/agendamento', (req, res) => {
+    const data = req.body.data;
+    const descricao = req.body.descricao;
+
+    connection.query('INSERT INTO agendamentos (data, descricao) VALUES (?, ?)', [data, descricao], (error, result) => {
+        if (error) {
+        console.error('Erro ao agendar o compromisso:', error);
+        res.status(500).send('Erro ao inserir agendamento no banco de dados');
+        } else {
+        res.redirect('/plataformaConsultor/agendamento');
+        }
+    });
+});
 
 // Início do Servidor
 app.listen(8080, () => {
