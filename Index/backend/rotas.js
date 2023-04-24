@@ -203,7 +203,7 @@ app.post('/plataformaConsultor/feed', (req, res) => {
 
 // Define as rotas do sistema de agendamento
 app.get('/plataformaConsultor/agendamento', (req, res) => {
-    connection.query('SELECT * FROM agendamentos ORDER BY data ASC', (error, results) => {
+    connection.query('SELECT * FROM agendamentos ORDER BY datas ASC', (error, results) => {
         if (error) {
           console.error('Erro ao buscar os agendamentos:', error);
           res.status(500).send('Erro ao buscar os agendamentos');
@@ -217,7 +217,7 @@ app.post('/plataformaConsultor/agendamento', (req, res) => {
     const data = req.body.data;
     const descricao = req.body.descricao;
 
-    connection.query('INSERT INTO agendamentos (data, descricao) VALUES (?, ?)', [data, descricao], (error, result) => {
+    connection.query('INSERT INTO agendamentos (datas, descricao) VALUES (?, ?)', [data, descricao], (error, result) => {
         if (error) {
         console.error('Erro ao agendar o compromisso:', error);
         res.status(500).send('Erro ao inserir agendamento no banco de dados');
