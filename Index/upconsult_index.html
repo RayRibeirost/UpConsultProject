@@ -25,27 +25,29 @@
 
     <link rel="icon" type="image/png" href="./Resources/Plataforma/geral-logo-amarela.png">
     <link rel="stylesheet" href="upconsult_index_style.css">
+
+     
 </head>
 
 <body>
 
     <!-- Menu principal -->
     <header class="menu-principal">
-        <figure class="imagem-logo">
+        <figure class="imagem-logo"  id="menuHome">
             <img src="./Resources/Plataforma/geral-logo-amarela.png" alt="">
         </figure>
         <nav id="menu-opcoes">
             <ul>
-                <li class="icone-menu mensagens"><a href="">
+                <li class="icone-menu mensagens"><a id="menu-principal-mensagens" href="">
                     <img src="./Resources/Plataforma/geral-menu-mensagens.png" alt="">
                 </a></li>
-                <li class="icone-menu agenda"><a href="">
+                <li class="icone-menu agenda"><a id="menu-principal-agenda" href="">
                     <img src="./Resources/Plataforma/geral-menu-agenda.png" alt="">
                 </a></li>
-                <li class="icone-menu notificacoes"><a href="">
+                <li class="icone-menu notificacoes"><a id="menu-principal-notificacoes" href="">
                     <img src="./Resources/Plataforma/geral-menu-notificacoes.png" alt="">
                 </a></li>
-                <li class="icone-menu config"><a href="">
+                <li class="icone-menu config"><a id="menu-principal-configs" href="">
                     <img src="./Resources/Plataforma/geral-menu-configs.png" alt="">
                 </a></li>
             </ul>
@@ -55,6 +57,7 @@
 
     <!-- Parte principal do consultor -->
     <main class="principal-consultor">
+        <!-- Informações principais -->
         <section class="info-principais">
             <div class="info-principais-card">
                 <figure class="info-principais-foto-perfil">
@@ -71,7 +74,11 @@
             <div class="info-principais-criar-feed-consultor">
                 <img src="./Resources/Plataforma/consultor-criar-feed.png" alt=""></div>
         </section>
+
+        
         <section class="feed-comunidade-consultor">
+            
+            <!-- Feed do consultor -->
             <div class="feed-consultor">
                 <h2>Feed</h2>
                 <div class="feed-card-consultor">
@@ -99,6 +106,8 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Comunidade do consultor -->
             <div class="comunidade">
                 <h2>Comunidade</h2>
                 <div class="comunidade-card">
@@ -118,6 +127,7 @@
                     </div>
                 </div>
             </div>
+            
         </section>
     </main>
 
@@ -155,8 +165,9 @@
 
     <!-- Área de notificações consultor -->
     <aside class="forms-mensagens-consultor">
+
         <!-- Form de proposta de solução -->
-        <div class="form-proposta-cosultor">
+        <div  id="formPropostaConsultor" class="form-proposta-consultor" style="visibility:hidden;">
             <h2>Proposta de solução</h2>
             <div class="card-solicitacao">
                 <div>
@@ -175,18 +186,18 @@
                 </div>
             </div>
             <form action="/plataformaConsultor/agendamento" method="post"  class="form" id="proposta-consultor">
-                <label for="descricaoSolucao">Descrição da solução</label><br>
-                <textarea name="descricaoSolucao" id="descricaoSolucao" cols="30" rows="10" placeholder="Escreva aqui" required></textarea><br>
-                <label for="dataAtendimentoConsultor">Sugestão de data para atendimento</label><br>
-                <input type="date" id="dataAtendimentoConsultor" name="dataAtendimentoConsultor" required><br>
-                <label for="horaAtendimentoConsultor">Sugestão de hora para atendimento</label><br>
-                <input type="time" id="horaAtendimentoConsultor" name="horaAtendimentoConsultor" required><br>
-                <input type="submit" value="Enviar proposta de solução"><br>
+                <label for="descricao-solucao">Descrição da solução</label><br>
+                <textarea name="descricao-solucao" id="descricaosolucao" cols="30" rows="10" placeholder="Escreva aqui" required></textarea><br>
+                <label for="data-atendimento-consultor">Sugestão de data para atendimento</label><br>
+                <input type="date" id="dataatendimentoconsultor" name="data-atendimento-consultor" required><br>
+                <label for="hora-atendimento-consultor">Sugestão de hora para atendimento</label><br>
+                <input type="time" id="horaatendimentoconsultor" name="hora-atendimento-consultor" required><br>
+                <input type="submit" value="Enviar proposta de solução" id="responder-solicitacao-consultor"><br>
             </form>
         </div>
 
         <!-- Agenda consultor -->
-        <div class="agenda-consultor">
+        <div id="agenda-consultor"  class="agenda-consultor" style="display:none">
             <h2>Agenda</h2>
             <div class="card-agenda-consultor">
                 <figure>
@@ -212,8 +223,9 @@
             </div>
         </div>
 
+
         <!--Área de feedbacks recebidos-->
-        <div class="feedbacks-notificacoes-consultor">
+        <div id="feedbacks-notificacoes-consultor" class="feedbacks-notificacoes-consultor" style="display:none">
             <h2>Notificações</h2>
             <div class="feedback-consultor">
                 <div>
@@ -241,12 +253,12 @@
         <div class="form-empresa-solicitacao-consultoria">
         <h2>Solicitação de consultoria</h2>
         <form action="/plataformaEmpresa/solicitacao" method="post">
-            <label for="tituloSolicitacaoEmpresa">Título da solicitação</label><br>
-            <input type="text" name="tituloSolicitacaoEmpresa" id="tituloSolicitacaoEmpresa" required><br>
-            <label for="descricaoSolicitacaoEmpresa">Descrição de solicitação</label><br>
-            <textarea name="descricaoSolicitacaoEmpresa" id="descricaoSolicitacaoEmpresa" cols="30" rows="10" placeholder="Escreva aqui" required></textarea><br>
-            <label for="areaDeConsultoriaEmpresa">Área de consutolria</label><br>
-            <select name="areaDeConsultoriaEmpresa" id="areaDeConsultoriaEmpresa" required>
+            <label for="titulo-solicitacao-empresa">Título da solicitação</label><br>
+            <input type="text" name="titulo-solicitacao-empresa" id="titulosolicitacaoempresa" required><br>
+            <label for="descricao-solicitacao-empresa">Descrição de solicitação</label><br>
+            <textarea name="descricao-solicitacao-empresa" id="descricaosolicitacaoempresa" cols="30" rows="10" placeholder="Escreva aqui" required></textarea><br>
+            <label for="area-de-consultoria-empresa">Área de consutolria</label><br>
+            <select name="area-de-consultoria-empresa" id="areadeconsultoriaempresa" required>
                 <option value="vendas">Vendas</option>
                 <option value="gestao">Gestão</option>
                 <option value="finanças">Finanças</option>
@@ -327,12 +339,12 @@
                 </div>
             </div>
             <form action="/plataformaEmpresa/feedbacks" method="post" id="form-empresa-feedback">
-                <label for="tituloFeedback">Título do feedback</label><br>
-                <input type="text" name="tituloFeedback" id="tituloFeedback" required><br>
-                <label for="descricaoFeedback">Descreva a experiência</label><br>
-                <textarea name="descricaoFeedback" id="descricaoFeedback" cols="30" rows="10" placeholder="Escreva aqui" required></textarea><br>
-                <label for="classificacaoConsultoriaEmpresa">Como você classifica a consultoria?</label><br>
-                <select name="classificacaoConsultoriaEmpresa" id="classificacaoConsultoriaEmpresa" required>
+                <label for="titulo-feedback">Título do feedback</label><br>
+                <input type="text" name="titulo-feedback" id="titulofeedback" required><br>
+                <label for="descricao-feedback">Descreva a experiência</label><br>
+                <textarea name="descricao-feedback" id="descricaofeedback" cols="30" rows="10" placeholder="Escreva aqui" required></textarea><br>
+                <label for="classificacao-consultoria-empresa">Como você classifica a consultoria?</label><br>
+                <select name="classificacao-consultoria-empresa" id="classificacaoconsultoriaempresa" required>
                     <option value="ruim">Ruim</option>
                     <option value="regular">Regular</option>
                     <option value="bom">Bom</option>
@@ -343,6 +355,6 @@
             </form>
         </div>
     </aside>
-    <script src="./upconsult-script.js" type="js"></script>
+    <script src="upconsult.js"></script>
 </body>
 </html>
