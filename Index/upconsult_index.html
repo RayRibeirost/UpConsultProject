@@ -31,21 +31,21 @@
 
     <!-- Menu principal -->
     <header class="menu-principal">
-        <figure class="imagem-logo">
+        <figure class="imagem-logo" id="menu-principal-home">
             <img src="./Resources/Plataforma/geral-logo-amarela.png" alt="">
         </figure>
         <nav id="menu-opcoes">
             <ul>
-                <li class="icone-menu mensagens"><a href="">
+                <li class="icone-menu mensagens"><a id="menu-principal-mensagens" href="">
                     <img src="./Resources/Plataforma/geral-menu-mensagens.png" alt="">
                 </a></li>
-                <li class="icone-menu agenda"><a href="">
+                <li class="icone-menu agenda"><a id="menu-principal-agenda" href="">
                     <img src="./Resources/Plataforma/geral-menu-agenda.png" alt="">
                 </a></li>
-                <li class="icone-menu notificacoes"><a href="">
+                <li class="icone-menu notificacoes"><a id="menu-principal-notificacoes" href="">
                     <img src="./Resources/Plataforma/geral-menu-notificacoes.png" alt="">
                 </a></li>
-                <li class="icone-menu config"><a href="">
+                <li class="icone-menu config"><a id="menu-principal-configs" href="">
                     <img src="./Resources/Plataforma/geral-menu-configs.png" alt="">
                 </a></li>
             </ul>
@@ -181,7 +181,7 @@
                 <input type="date" id="dataatendimentoconsultor" name="data-atendimento-consultor" required><br>
                 <label for="hora-atendimento-consultor">Sugestão de hora para atendimento</label><br>
                 <input type="time" id="horaatendimentoconsultor" name="hora-atendimento-consultor" required><br>
-                <input type="submit" value="Enviar proposta de solução"><br>
+                <input type="submit" value="Enviar proposta de solução" id="responder-solicitacao-consultor"><br>
             </form>
         </div>
 

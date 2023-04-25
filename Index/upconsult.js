@@ -32,10 +32,39 @@
         1.13 - Botão de publicação de feedback
             Faz com que uma mensagem apareça de que o feedback foi publicado no perfil
 
-
+    
 
     2 - Empresa
 
 
 
 */
+
+/* BOTÕES CONSULTOR */
+
+let botaoHome = document.getElementById("menu-principal-home")
+let botaoMensagensConsultor = document.getElementById("menu-principal-mensagens")
+let botaoAgendaConsultor = document.getElementById("menu-principal-agenda")
+let botaoNotificacoesConsultor = document.getElementById("menu-principal-notificacoes")
+let botaoAtendimentoConsultor = document.getElementsByClassName("info-principais-card-atendimento-consultor")
+let botaoCriarFeedConsultor = document.getElementsByClassName("info-principais-criar-feed-consultor")
+let botaoResponderSolicitacaoConsultor = document.getElementsByClassName("feed-botao-responder-consultor")
+let botaoIgrorarSolicitacaoConsultor = document.getElementsByClassName("feed-botao-ignorar-consultor")
+let botaoAceitarParceriaConsultor = document.getElementsByClassName("comunidade-card-botao-parceria")
+let botaoEnviarPropostaSolucaoConsultor = document.getElementById("responder-solicitacao-consultor")
+let botaoAgendaMensagemConsultor = document.getElementsByClassName("agenda-consultor-icone-mensagem")
+let botaoAgendaChamadaConsultor = document.getElementsByClassName("agenda-consultor-icone-ligacao")
+let botãoAgendaCancelarConsultor = document.getElementsByClassName("agenda-consultor-icone-cancelamento")
+let botaoPublicarFeedbackConsultor = document.getElementsByClassName("feedback-consultor-botao-publicar")
+
+/* Lado direito Consultor */
+
+let formularioRespostaSolicitacaoConsultor
+let agendaConsultor  
+let feedbackConsultor
+
+/* Funções Consultor */
+
+function botaoHome() {
+    
+}
