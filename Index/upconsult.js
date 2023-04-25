@@ -42,7 +42,7 @@
 
 /* BOTÕES CONSULTOR */
 
-let botaoHome = document.getElementById("menu-principal-home")
+let botaoHome = document.getElementById("menuHome")
 let botaoMensagensConsultor = document.getElementById("menu-principal-mensagens")
 let botaoAgendaConsultor = document.getElementById("menu-principal-agenda")
 let botaoNotificacoesConsultor = document.getElementById("menu-principal-notificacoes")
@@ -59,12 +59,21 @@ let botaoPublicarFeedbackConsultor = document.getElementsByClassName("feedback-c
 
 /* Lado direito Consultor */
 
-let formularioRespostaSolicitacaoConsultor
-let agendaConsultor  
-let feedbackConsultor
+
+
+let formularioRespostaSolicitacaoConsultor = document.getElementById("formPropostaConsultor")
+let agendaConsultor = document.getElementById("agenda-consultor")
+let feedbackConsultor = document.getElementById("feedbacks-notificacoes-consultor")
+let chamadaConsultor = document.getElementById("atendimento-consultor")
+let chamadaEmpresa = document.getElementById("atendimento-empresa")
 
 /* Funções Consultor */
 
-function botaoHome() {
+botaoHome.addEventListener("click", function() {
+
+    formularioRespostaSolicitacaoConsultor.style.visibility = "hidden"
+    agendaConsultor.style.display = "none"
+    feedbackConsultor.style.display= "none"
     
-}
+})
+
