@@ -1,13 +1,10 @@
 // Constantes Globais
 const express = require('express');
 const app = express();
-const CadastroEmpresa = require('./models/CadastroEmpresa');
-const cadastroConsultor = require('./models/cadastroConsultor');
-const db2 = require('./models/db2');
 const bodyParser = require('body-parser');
 const session = require('express-session');
 const mysql = require('mysql2');
-const ejs = require('ejs');
+
 
 // Conexão com o banco de dados 
 const connection = mysql.createConnection({
@@ -27,10 +24,6 @@ const connection = mysql.createConnection({
 
 app.use(express.json());
 
-// Configuração do EJS como template engine
-app.set('views', './views');
-app.set('view engine', 'ejs'); 
-
 app.use(express.static('C:/Users/claud/OneDrive/Área de Trabalho/JGT codes/UpConsultProject/Index'));
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -48,9 +41,14 @@ app.get("/", async (req, res) => {
     res.sendFile('C:/Users/claud/OneDrive/Área de Trabalho/JGT codes/UpConsultProject/Index/index.html');
 });
 
-// Rota Quem sou eu 
-app.get("/Quem-sou-eu", async (req, res) => {
-    res.sendFile('C:/Users/claud/OneDrive/Área de Trabalho/JGT codes/UpConsultProject/Index/quem-sou-eu.html');
+// Rota Quem sou eu Cadastro
+app.get("/quemSouEuCadastro", async (req, res) => {
+    res.sendFile('C:/Users/claud/OneDrive/Área de Trabalho/JGT codes/UpConsultProject/Index/quem-sou-eu-cadastro.html');
+});
+
+// Rota Quem sou eu Login
+app.get("/quemSouEuLogin", async (req, res) => {
+    res.sendFile('C:/Users/claud/OneDrive/Área de Trabalho/JGT codes/UpConsultProject/Index/quem-sou-eu-login.html');
 });
 
 // Rota Cadastrar Empresa
@@ -159,7 +157,7 @@ app.post('/loginConsultor', (req, res) => {
 // Rota para página inicial após o login
 app.get('/plataformaConsultor', (req, res) => {
     if (req.session.loggedin) {
-        res.send('Bem-vindo(a), ' + req.session.username + '!');
+        res.sendFile('C:/Users/claud/OneDrive/Área de Trabalho/JGT codes/UpConsultProject/Index/upconsult_index.html');
     } else {
         res.send('Por favor, faça o login para ver esta página!');
     }
