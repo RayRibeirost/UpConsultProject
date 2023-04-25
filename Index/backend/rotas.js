@@ -184,11 +184,12 @@ app.get('/plataformaConsultor/feed', (req, res) => {
 // Rota POST para a postagem
 app.post('/plataformaConsultor/feed', (req, res) => {
     const nome = req.session.nome
-    const titulo = req.body.titulo; 
-    const conteudo  = req.body.conteudo;
+    const titulo = req.body.titulo-solicitacao-empresa; 
+    const conteudo  = req.body.descricao-solicitacao-empresa;
+    const areaConsultoria = req.body.area-de-consultoria-empresa;
   
     // Inserção dos dados no banco de dados
-    const posts = `INSERT INTO solicitacao (nome, titulo, conteudo) VALUES ('${nome}', '${titulo}', '${conteudo}')`;
+    const posts = `INSERT INTO solicitacao (nome, titulo, conteudo, areaConsultoria) VALUES ('${nome}', '${titulo}', '${conteudo}', '${areaConsultoria}')`;
   
     connection.query(posts, (err, result) => {
       if (err) {
@@ -214,10 +215,11 @@ app.get('/plataformaConsultor/agendamento', (req, res) => {
 });
 
 app.post('/plataformaConsultor/agendamento', (req, res) => {
-    const data = req.body.data;
-    const descricao = req.body.descricao;
+    const data = req.body.data-atendimento-consultor;
+    const solucao = req.body.descricao-solucao;
+    const hora = req.body.hora-atendimento-consultor;
 
-    connection.query('INSERT INTO agendamentos (datas, descricao) VALUES (?, ?)', [data, descricao], (error, result) => {
+    connection.query('INSERT INTO agendamentos (datas, solucao, hora) VALUES (?, ?, ?)', [data, solucao, hora], (error, result) => {
         if (error) {
         console.error('Erro ao agendar o compromisso:', error);
         res.status(500).send('Erro ao inserir agendamento no banco de dados');
