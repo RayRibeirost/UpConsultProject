@@ -183,13 +183,13 @@ app.get('/plataformaConsultor/feed', (req, res) => {
 
 // Rota POST para a postagem
 app.post('/plataformaConsultor/feed', (req, res) => {
-    const nome = req.session.nome
-    const titulo = req.body.titulo-solicitacao-empresa; 
-    const conteudo  = req.body.descricao-solicitacao-empresa;
-    const areaConsultoria = req.body.area-de-consultoria-empresa;
+    const nomefeed = req.session.nome
+    const titulo = req.body.titulosolicitacaoempresa; 
+    const conteudo  = req.body.descricaosolicitacaoempresa;
+    const areaConsultoria = req.body.areadeconsultoriaempresa;
   
     // Inserção dos dados no banco de dados
-    const posts = `INSERT INTO solicitacao (nome, titulo, conteudo, areaConsultoria) VALUES ('${nome}', '${titulo}', '${conteudo}', '${areaConsultoria}')`;
+    const posts = `INSERT INTO solicitacao (nome, titulo, conteudo, areaConsultoria) VALUES ('${nomefeed}', '${titulo}', '${conteudo}', '${areaConsultoria}')`;
   
     connection.query(posts, (err, result) => {
       if (err) {
@@ -204,20 +204,23 @@ app.post('/plataformaConsultor/feed', (req, res) => {
 
 // Define as rotas do sistema de agendamento
 app.get('/plataformaConsultor/agendamento', (req, res) => {
-    connection.query('SELECT * FROM agendamentos ORDER BY datas ASC', (error, results) => {
+     // Query SQL para buscar as postagens mais recentes na tabela
+    const agendamentos = 'SELECT * FROM agendamentos ORDER BY datas ASC'
+    // Executar a query no banco de dados
+    connection.query(agendamentos, (error, results) => {
         if (error) {
           console.error('Erro ao buscar os agendamentos:', error);
           res.status(500).send('Erro ao buscar os agendamentos');
         } else {
-         res.render('upconsult_index.html', { agendamentos: results });
+         res.render('upconsult_index.html', {agendamentos: results });
         }
     });
 });
 
 app.post('/plataformaConsultor/agendamento', (req, res) => {
-    const data = req.body.data-atendimento-consultor;
-    const solucao = req.body.descricao-solucao;
-    const hora = req.body.hora-atendimento-consultor;
+    const data = req.body.dataatendimentoconsultor;
+    const solucao = req.body.descricaosolucao;
+    const hora = req.body.horaatendimentoconsultor;
 
     connection.query('INSERT INTO agendamentos (datas, solucao, hora) VALUES (?, ?, ?)', [data, solucao, hora], (error, result) => {
         if (error) {
@@ -226,6 +229,43 @@ app.post('/plataformaConsultor/agendamento', (req, res) => {
         } else {
         res.redirect('/plataformaConsultor/agendamento');
         }
+    });
+});
+
+// Área de Feedbacks 
+app.get('/plataformaConsultor/feedbacks', (req, res) => {
+    // Query SQL para buscar as postagens mais recentes na tabela
+    const feedback = 'SELECT * FROM feedbacks';
+    // Executar a query no banco de dados
+    connection.query(feedback, (error, results) => {
+      if (error) {
+        console.error('Erro ao buscar os feedbacks:', error);
+        res.status(500).send('Erro ao buscar os feedbacks.');
+        return;
+      }
+      // Renderizar as postagens na página HTML
+      res.render('upconsult_index.html', {feedback: results });
+    });
+}); 
+
+// Rota POST para a postagem
+app.post('/plataformaConsultor/feedbacks', (req, res) => {
+    const nomefb = req.session.nome 
+    const titulofb = req.body.titulofeedback; 
+    const descricaofb  = req.body.descricaofeedback;
+    const classificacaofb = req.body.classificacaoconsultoriaempresa;
+  
+    // Inserção dos dados no banco de dados
+    const posts = `INSERT INTO feedbacks (nome, titulo, descricao, classificacao) VALUES ('${nomefb}', '${titulofb}', '${descricaofb}', '${classificacaofb}')`;
+  
+    connection.query(posts, (err, result) => {
+      if (err) {
+        console.error('Erro ao inserir os feedback no banco de dados:', err);
+        res.status(500).send('Erro ao inserir os feedback no banco de dados');
+      } else {
+        console.log('Feedback inseridos com sucesso no banco de dados');
+        res.redirect('/plataformaConsultor/feedbacks');
+      }
     });
 });
 
