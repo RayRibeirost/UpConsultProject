@@ -174,7 +174,7 @@
                     <p class="proposta-descricao-empresa">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
                 </div>
             </div>
-            <form action="" class="form" id="proposta-consultor">
+            <form action="/plataformaConsultor/agendamento" method="post"  class="form" id="proposta-consultor">
                 <label for="descricao-solucao">Descrição da solução</label><br>
                 <textarea name="descricao-solucao" id="descricaosolucao" cols="30" rows="10" placeholder="Escreva aqui" required></textarea><br>
                 <label for="data-atendimento-consultor">Sugestão de data para atendimento</label><br>
@@ -240,7 +240,7 @@
         <!--Form de solicitação de consultoria-->
         <div class="form-empresa-solicitacao-consultoria">
         <h2>Solicitação de consultoria</h2>
-        <form action="">
+        <form action="/plataformaEmpresa/solicitacao" method="post">
             <label for="titulo-solicitacao-empresa">Título da solicitação</label><br>
             <input type="text" name="titulo-solicitacao-empresa" id="titulosolicitacaoempresa" required><br>
             <label for="descricao-solicitacao-empresa">Descrição de solicitação</label><br>
@@ -326,7 +326,7 @@
                     <p></p>
                 </div>
             </div>
-            <form action="" id="form-empresa-feedback">
+            <form action="/plataformaEmpresa/feedbacks" method="post" id="form-empresa-feedback">
                 <label for="titulo-feedback">Título do feedback</label><br>
                 <input type="text" name="titulo-feedback" id="titulofeedback" required><br>
                 <label for="descricao-feedback">Descreva a experiência</label><br>
