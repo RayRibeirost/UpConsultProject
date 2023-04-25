@@ -119,12 +119,11 @@ app.post('/loginEmpresa', (req, res) => {
 
 // Rota para página inicial após o login
 app.get('/plataformaEmpresa', (req, res) => {
-    if (req.session.loggedin) {
+    if (req.session.loggedin === true) {
         res.sendFile('C:/Users/claud/OneDrive/Área de Trabalho/JGT codes/UpConsultProject/Index/upconsult_index.html');
     } else {
         res.send('Por favor, faça o login para ver esta página!');
     }
-    res.end();
 });
 
 // Rotas para página de login do consultor
@@ -156,12 +155,11 @@ app.post('/loginConsultor', (req, res) => {
 
 // Rota para página inicial após o login
 app.get('/plataformaConsultor', (req, res) => {
-    if (req.session.loggedin) {
+    if (req.session.loggedin === true) {
         res.sendFile('C:/Users/claud/OneDrive/Área de Trabalho/JGT codes/UpConsultProject/Index/upconsult_index.html');
     } else {
         res.send('Por favor, faça o login para ver esta página!');
     }
-    res.end();
 });
 
 app.get('/plataformaConsultor/feed', (req, res) => {
@@ -182,9 +180,9 @@ app.get('/plataformaConsultor/feed', (req, res) => {
 // Rota POST para a postagem
 app.post('/plataformaEmpresa/solicitacao', (req, res) => {
     const nomefeed = req.session.nome
-    const titulo = req.body.titulosolicitacaoempresa; 
-    const conteudo  = req.body.descricaosolicitacaoempresa;
-    const areaConsultoria = req.body.areadeconsultoriaempresa;
+    const titulo = req.body.tituloSolicitacaoEmpresa; 
+    const conteudo  = req.body.descricaoSolicitacaoEmpresa;
+    const areaConsultoria = req.body.areaDeConsultoriaEmpresa;
   
     // Inserção dos dados no banco de dados
     const posts = `INSERT INTO solicitacao (nome, titulo, conteudo, areaConsultoria) VALUES ('${nomefeed}', '${titulo}', '${conteudo}', '${areaConsultoria}')`;
@@ -195,7 +193,7 @@ app.post('/plataformaEmpresa/solicitacao', (req, res) => {
         res.status(500).send('Erro ao inserir os dados no banco de dados');
       } else {
         console.log('Dados inseridos com sucesso no banco de dados');
-        res.redirect('/plataformaConsultor/feed');
+        res.redirect('/plataformaEmpresa');
       }
     });
 });
@@ -216,16 +214,16 @@ app.get('/plataformaEmpresa/agendamento', (req, res) => {
 });
 
 app.post('/plataformaConsultor/agendamento', (req, res) => {
-    const data = req.body.dataatendimentoconsultor;
-    const solucao = req.body.descricaosolucao;
-    const hora = req.body.horaatendimentoconsultor;
+    const data = req.body.dataAtendimentoConsultor;
+    const solucao = req.body.descricaoSolucao;
+    const hora = req.body.horaAtendimentoConsultor;
 
     connection.query('INSERT INTO agendamentos (datas, solucao, hora) VALUES (?, ?, ?)', [data, solucao, hora], (error, result) => {
         if (error) {
         console.error('Erro ao agendar o compromisso:', error);
         res.status(500).send('Erro ao inserir agendamento no banco de dados');
         } else {
-        res.redirect('/plataformaConsultor/agendamento');
+        res.redirect('/plataformaConsultor');
         }
     });
 });
@@ -249,9 +247,9 @@ app.get('/plataformaConsultor/feedbacks', (req, res) => {
 // Rota POST para a postagem
 app.post('/plataformaEmpresa/feedbacks', (req, res) => {
     const nomefb = req.session.nome 
-    const titulofb = req.body.titulofeedback; 
-    const descricaofb  = req.body.descricaofeedback;
-    const classificacaofb = req.body.classificacaoconsultoriaempresa;
+    const titulofb = req.body.tituloFeedback; 
+    const descricaofb  = req.body.descricaoFeedback;
+    const classificacaofb = req.body.classificacaoConsultoriaEmpresa;
   
     // Inserção dos dados no banco de dados
     const posts = `INSERT INTO feedbacks (nome, titulo, descricao, classificacao) VALUES ('${nomefb}', '${titulofb}', '${descricaofb}', '${classificacaofb}')`;
@@ -262,7 +260,7 @@ app.post('/plataformaEmpresa/feedbacks', (req, res) => {
         res.status(500).send('Erro ao inserir os feedback no banco de dados');
       } else {
         console.log('Feedback inseridos com sucesso no banco de dados');
-        res.redirect('/plataformaConsultor/feedbacks');
+        res.redirect('/plataformaEmpresa');
       }
     });
 });
