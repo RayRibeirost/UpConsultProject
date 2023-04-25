@@ -182,7 +182,7 @@ app.get('/plataformaConsultor/feed', (req, res) => {
 }); 
 
 // Rota POST para a postagem
-app.post('/plataformaConsultor/feed', (req, res) => {
+app.post('/plataformaEmpresa/solicitacao', (req, res) => {
     const nomefeed = req.session.nome
     const titulo = req.body.titulosolicitacaoempresa; 
     const conteudo  = req.body.descricaosolicitacaoempresa;
@@ -203,7 +203,7 @@ app.post('/plataformaConsultor/feed', (req, res) => {
 });
 
 // Define as rotas do sistema de agendamento
-app.get('/plataformaConsultor/agendamento', (req, res) => {
+app.get('/plataformaEmpresa/agendamento', (req, res) => {
      // Query SQL para buscar as postagens mais recentes na tabela
     const agendamentos = 'SELECT * FROM agendamentos ORDER BY datas ASC'
     // Executar a query no banco de dados
@@ -249,7 +249,7 @@ app.get('/plataformaConsultor/feedbacks', (req, res) => {
 }); 
 
 // Rota POST para a postagem
-app.post('/plataformaConsultor/feedbacks', (req, res) => {
+app.post('/plataformaEmpresa/feedbacks', (req, res) => {
     const nomefb = req.session.nome 
     const titulofb = req.body.titulofeedback; 
     const descricaofb  = req.body.descricaofeedback;
