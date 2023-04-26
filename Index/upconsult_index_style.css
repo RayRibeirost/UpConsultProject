@@ -18,7 +18,7 @@ body {
 header {
     background: linear-gradient(177.57deg, #5248F8 0.93%, #121276 103.02%);
     width: 180px;
-    height: 1000px;
+    height: 1170px;
     
 }
 
@@ -50,9 +50,8 @@ li img {
 margin: 20px;
 }
 
-.icone-menu-notificacoes {
-    margin-bottom: 240px;
-    
+.icone-menu-config {
+    margin-top: 380px;
 }
 
 
@@ -69,22 +68,27 @@ margin: 20px;
 .info-principais-card {
     border: 2px solid #D9D9D9;
     border-radius: 8px;
-    padding: 20px;
-    width: 280px;
+    padding: 60px;
+    width: 400px;
     background-color: #D9D9D9;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+#info-principais-foto-consultor{
+    width: 100px;
+}
+
 .info-principais-card, p {
     margin-left: 8px;
+   
 }
 
 .info-principais-card-atendimento-consultor {
     border: 2px solid #121276;
     border-radius: 8px;
-    padding: 20px;
+    padding: 40px;
     background-color: #121276;
     display: flex;
     justify-content: center;
@@ -94,7 +98,7 @@ margin: 20px;
 .info-principais-criar-feed-consultor {
     border: 2px solid #E5C73F;
     border-radius: 8px;
-    padding: 20px;
+    padding: 40px;
     background-color: #E5C73F;
     display: flex;
     justify-content: center;
@@ -103,20 +107,78 @@ margin: 20px;
 
 .feed-comunidade-consultor {
     display: flex;
-    column-gap: 20px;
+    column-gap: 30px;
     justify-content: center;
 }
 
+.fed {
+    position: absolute;
+    text-align: left;
+    left: 325px;
+}
+
 .feed-card-consultor {
-    padding: 25px;
-    height: 500px;
+    padding: 45px 45px;
+    height: 550px;
+    width: 400px;
     border: 2px solid #D9D9D9;
     border-radius: 8px;
     background-color: #D9D9D9;
     display:flex;
-    flex-direction: column;
     justify-content: center;
     align-items:center;
+    margin-left: 210px;
+    margin-top: 130px;
+}
+
+.card-feed-info-empresa {
+    position: absolute;   
+    text-align: center;
+    top: 630px;
+    left: 360px;   
+}
+
+.feed-info-empresa {
+    position: absolute;
+    text-align: left;
+    top:630px;
+    left: 410px;
+}
+
+.feed-foto-solicitacao-empresa{
+    text-align: center;
+    margin-top: 90px;
+    margin-bottom: 8px;
+}
+
+.descricao-empresa {
+    text-align: left;
+    margin-left: 20px;
+    margin-bottom: 60px;
+}
+
+.feed-botoes-consultor {
+    position: absolute;
+    left: 390px;
+    top:1100px;
+}
+
+.feed-botao-responder-consultor {
+    border-radius: 4px;
+    border: 2px solid #E5C73F;
+    background-color: #E5C73F;
+    padding: 8px 8px;
+    width: 130px;
+}
+
+.feed-botao-ignorar-consultor {
+    border-radius: 4px;
+    border: 2px solid #121276;
+    background-color: #1E1E26;
+    padding: 8px 8px;
+    width: 130px;
+    color: white;
+    
 }
 
 /** PLATAFORMA EMPRESA **/
